@@ -1,0 +1,12 @@
+# Local source material and superseded asset copies
+references/
+ninoy-percussion-rental/
+
+# Internal development documentation
+ASSETS.md
+QA.md
+Codex GPT-5.6 Sol Prompt — Percussion Rental Website.md
+
+# Operating-system files
+.DS_Store
+Thumbs.db

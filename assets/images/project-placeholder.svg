@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<rect width="1200" height="800" rx="36" fill="#173f2c"/>
+<path d="M0 585c180-100 320-35 470-115 180-98 312-82 480 10 85 46 166 55 250 36v284H0z" fill="#0e3523"/>
+<circle cx="178" cy="195" r="7" fill="#e8ab2b"/><circle cx="304" cy="150" r="5" fill="#e8ab2b"/><circle cx="948" cy="170" r="6" fill="#e8ab2b"/>
+<path d="M250 440v-125M250 315l-44 58M250 315l45 58M590 455V265M590 265l-65 86M590 265l65 86M885 450v-150M885 300l-45 70M885 300l50 70" stroke="#ffffe3" stroke-width="10" stroke-linecap="round" opacity=".24"/>
+<text x="600" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#ffffe3" opacity=".72">Foto project</text>
+</svg>

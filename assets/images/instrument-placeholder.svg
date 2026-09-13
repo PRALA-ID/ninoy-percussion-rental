@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+<rect width="800" height="560" rx="32" fill="#eef1ed"/>
+<circle cx="400" cy="265" r="108" fill="none" stroke="#0e3523" stroke-width="12" opacity=".18"/>
+<path d="M326 330c40-84 108-84 148 0M350 220l108 148M450 220L342 368" fill="none" stroke="#0e3523" stroke-width="14" stroke-linecap="round" opacity=".32"/>
+<circle cx="350" cy="220" r="16" fill="#e8ab2b" opacity=".8"/><circle cx="450" cy="220" r="16" fill="#e8ab2b" opacity=".8"/>
+<text x="400" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#0e3523" opacity=".55">Foto instrumen</text>
+</svg>
