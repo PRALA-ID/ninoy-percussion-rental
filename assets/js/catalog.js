@@ -8,7 +8,6 @@
   const filterGroups = [...catalog.querySelectorAll('[data-filter-group]')];
   const resultCount = document.getElementById('catalog-count');
   const emptyState = document.getElementById('catalog-empty');
-  const resetButton = document.getElementById('catalog-reset');
   const dimensions = ['category'];
   const state = {
     category: 'all'
@@ -61,7 +60,6 @@
 
     if (resultCount) resultCount.textContent = `${visibleCount} instrumen`;
     if (emptyState) emptyState.hidden = visibleCount !== 0;
-    if (resetButton) resetButton.disabled = dimensions.every(dimension => state[dimension] === 'all');
   };
 
   const setFilter = (dimension, value) => {
@@ -78,16 +76,6 @@
     });
   });
 
-  if (resetButton) {
-    resetButton.addEventListener('click', () => {
-      dimensions.forEach(dimension => {
-        state[dimension] = 'all';
-      });
-      updateCategoryQuery();
-      render();
-    });
-  }
-
   const requestedCategory = new URLSearchParams(window.location.search).get('category');
   if (requestedCategory) {
     const normalizedCategory = requestedCategory.trim().toLowerCase();
@@ -95,4 +83,63 @@
   }
 
   render();
+
+  const dialog = document.getElementById('catalog-dialog');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+
+  const closeButton = dialog.querySelector('.project-dialog-close');
+  const dialogImage = dialog.querySelector('.project-dialog-media img');
+  const dialogTitle = dialog.querySelector('#catalog-dialog-title');
+  const dialogMeta = dialog.querySelector('.catalog-dialog-meta');
+  const dialogPrice = dialog.querySelector('.catalog-dialog-price');
+  let activeCard = null;
+
+  const cardText = (card, selector) => card.querySelector(selector)?.textContent.trim() || '';
+
+  const openInstrument = (card) => {
+    const sourceImage = card.querySelector('.catalog-card-media img');
+    const metadata = [...card.querySelectorAll('.catalog-card-meta span')]
+      .map(item => item.textContent.trim())
+      .filter(Boolean)
+      .join(' · ');
+
+    activeCard = card;
+    dialogTitle.textContent = cardText(card, 'h3');
+    dialogMeta.textContent = metadata;
+    dialogPrice.textContent = cardText(card, '.catalog-card-price');
+    dialogMeta.hidden = !metadata;
+    dialogPrice.hidden = !dialogPrice.textContent;
+    dialogImage.src = sourceImage?.currentSrc || sourceImage?.src || '';
+    dialogImage.alt = sourceImage?.alt || '';
+    dialog.showModal();
+  };
+
+  const updateCardAccessibility = () => {
+    cards.forEach((card) => {
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-haspopup', 'dialog');
+      card.setAttribute('aria-label', `Lihat detail ${cardText(card, 'h3')}`);
+    });
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => openInstrument(card));
+    card.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      openInstrument(card);
+    });
+  });
+
+  closeButton?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    activeCard?.focus();
+    activeCard = null;
+  });
+
+  updateCardAccessibility();
 })();
