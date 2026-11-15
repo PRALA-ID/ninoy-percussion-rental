@@ -24,7 +24,13 @@ Then open `http://localhost:8000/`.
 - Homepage collaborations use a fixed four-column, two-row desktop grid with equal-height cards;
   the project page uses the same compact 16:9 card treatment.
 - Project service labels are standardized to Rental and Performance.
-- Catalog filtering is intentionally simplified to instrument category.
+- The instrument catalog (`/koleksi`) mirrors the *Ninoy Percussion Rental Instrument E-Catalogue* PDF,
+  which is the single source of truth: names, brands, prices, categories (Pitched, Unpitched,
+  Auxiliary, Latin) and order all come from the PDF. Update the PDF first, then mirror it here;
+  homepage category cards link to the same four categories.
+- Instrument photos are the real studio shots used in the PDF, cropped to 4:3 and served as
+  `assets/images/instruments/<slug>-640.webp` (cards) and `-1280.webp` (detail dialog) via `srcset`.
+- Catalog filtering is intentionally simplified to instrument category; old `?category=mallet|drums|cymbals`
+  links are mapped to the new categories.
 - Long catalog metadata uses single-line ellipsis truncation to preserve the inline price.
-- Catalog cards and homepage collection categories use a neutral photographic placeholder until verified product photos are supplied.
 - Testimonial cards use transparent placeholders until approved client quotes are supplied.

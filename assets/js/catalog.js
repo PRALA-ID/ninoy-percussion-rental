@@ -76,10 +76,14 @@
     });
   });
 
+  // Categories follow the e-catalogue PDF; older links used finer groups.
+  const legacyCategories = { mallet: 'pitched', drums: 'unpitched', cymbals: 'unpitched' };
   const requestedCategory = new URLSearchParams(window.location.search).get('category');
   if (requestedCategory) {
     const normalizedCategory = requestedCategory.trim().toLowerCase();
-    if (isValidValue('category', normalizedCategory)) state.category = normalizedCategory;
+    const category = legacyCategories[normalizedCategory] || normalizedCategory;
+    if (isValidValue('category', category)) state.category = category;
+    updateCategoryQuery();
   }
 
   render();
@@ -109,6 +113,8 @@
     dialogPrice.textContent = cardText(card, '.catalog-card-price');
     dialogMeta.hidden = !metadata;
     dialogPrice.hidden = !dialogPrice.textContent;
+    dialogImage.srcset = sourceImage?.srcset || '';
+    dialogImage.sizes = sourceImage?.srcset ? '(max-width: 36rem) calc(100vw - 2rem), 34rem' : '';
     dialogImage.src = sourceImage?.currentSrc || sourceImage?.src || '';
     dialogImage.alt = sourceImage?.alt || '';
     dialog.showModal();

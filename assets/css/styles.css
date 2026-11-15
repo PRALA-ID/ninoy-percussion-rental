@@ -571,7 +571,7 @@ blockquote,
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 1.25rem;
 }
@@ -614,9 +614,9 @@ blockquote,
 .category-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 2.4 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   transition: transform 220ms ease;
 }
 
@@ -1710,6 +1710,7 @@ blockquote,
 }
 
 .item-price {
+  grid-column: 2;
   margin: 0;
   padding: 0;
   border-top: 0;
@@ -2534,10 +2535,6 @@ blockquote,
 
   .number-item dt {
     font-size: 0.56rem;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
   }
 
   .category-card {
