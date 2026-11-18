@@ -57,12 +57,10 @@
           <div class="filter-scroll-shell">
           <div class="filter-options filter-options--category" id="category-filters" data-scroll-track tabindex="0" aria-label="Filter kategori yang dapat digeser">
             <button class="filter-button is-active" type="button" data-filter-value="all" aria-pressed="true" aria-controls="catalog-grid">Semua Kategori</button>
-            <button class="filter-button" type="button" data-filter-value="mallet" aria-pressed="false" aria-controls="catalog-grid">Mallet</button>
-            <button class="filter-button" type="button" data-filter-value="drums" aria-pressed="false" aria-controls="catalog-grid">Drums</button>
-            <button class="filter-button" type="button" data-filter-value="cymbals" aria-pressed="false" aria-controls="catalog-grid">Cymbals</button>
-            <button class="filter-button" type="button" data-filter-value="latin" aria-pressed="false" aria-controls="catalog-grid">Latin</button>
+            <button class="filter-button" type="button" data-filter-value="pitched" aria-pressed="false" aria-controls="catalog-grid">Pitched</button>
+            <button class="filter-button" type="button" data-filter-value="unpitched" aria-pressed="false" aria-controls="catalog-grid">Unpitched</button>
             <button class="filter-button" type="button" data-filter-value="auxiliary" aria-pressed="false" aria-controls="catalog-grid">Auxiliary</button>
-            <button class="filter-button" type="button" data-filter-value="accessories" aria-pressed="false" aria-controls="catalog-grid">Accessories</button>
+            <button class="filter-button" type="button" data-filter-value="latin" aria-pressed="false" aria-controls="catalog-grid">Latin</button>
           </div>
           <button class="mobile-scroll-cue filter-scroll-cue" type="button" data-scroll-target="category-filters" data-direction="1" aria-label="Geser filter kategori ke kanan">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
@@ -71,253 +69,514 @@
         </fieldset>
 
         <div class="item-grid catalog-grid" id="catalog-grid">
-          <article class="item-card catalog-card" data-catalog-item data-category="drums" data-type="timpani" data-brand="adams">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/timpani-set.png" alt="Set timpani konser" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/musser-glockenspiel-640.webp" srcset="../assets/images/instruments/musser-glockenspiel-640.webp 640w, ../assets/images/instruments/musser-glockenspiel-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Musser Glockenspiel" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">01</div>
-              <h3>Timpani</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Adams</span><span>32″, 29″, 23″</span></div>
-              <p class="item-price catalog-card-price">Rp 2.000.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="mallet" data-type="xylophone" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/xylophone-rolling.png" alt="Xylophone konser beroda" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">02</div>
-              <h3>Xylophone</h3>
-              <div class="item-meta catalog-card-meta"><span>Rolling</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="mallet" data-type="glockenspiel" data-brand="musser">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/glockenspiel.png" alt="Glockenspiel konser" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">03</div>
               <h3>Glockenspiel</h3>
               <div class="item-meta catalog-card-meta"><span class="brand">Musser</span></div>
-              <p class="item-price catalog-card-price">Rp 500.000/hari</p>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="drums" data-type="bass-drum" data-brand="pearl">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/concert-bass-drum.png" alt="Bass drum konser" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/royale-vibraphone-640.webp" srcset="../assets/images/instruments/royale-vibraphone-640.webp 640w, ../assets/images/instruments/royale-vibraphone-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Royale Vibraphone" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">04</div>
-              <h3>Bass Drum</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Pearl</span><span>26″</span></div>
-              <p class="item-price catalog-card-price">Rp 400.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="mallet" data-type="vibraphone" data-brand="royale">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/vibraphone.png" alt="Vibraphone konser" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">05</div>
               <h3>Vibraphone</h3>
               <div class="item-meta catalog-card-meta"><span class="brand">Royale</span></div>
-              <p class="item-price catalog-card-price">Rp 600.000/hari</p>
+              <p class="item-price catalog-card-price">Rp600.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="mallet" data-type="marimba" data-brand="royale">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/marimba-4-3-octave.png" alt="Marimba 4,3 oktaf" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/royale-marimba-640.webp" srcset="../assets/images/instruments/royale-marimba-640.webp 640w, ../assets/images/instruments/royale-marimba-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Royale Marimba" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">06</div>
               <h3>Marimba</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Royale</span><span>4.3 Oct</span></div>
-              <p class="item-price catalog-card-price">Rp 800.000/hari</p>
+              <div class="item-meta catalog-card-meta"><span class="brand">Royale</span></div>
+              <p class="item-price catalog-card-price">Rp800.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="mallet" data-type="tubular-bells" data-brand="adams">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/tubular-bells.png" alt="Tubular bells konser" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/adams-xylophone-640.webp" srcset="../assets/images/instruments/adams-xylophone-640.webp 640w, ../assets/images/instruments/adams-xylophone-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Adams Xylophone" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">07</div>
-              <h3>Tubular Bells / Chimes</h3>
+              <h3>Xylophone</h3>
               <div class="item-meta catalog-card-meta"><span class="brand">Adams</span></div>
-              <p class="item-price catalog-card-price">Rp 2.000.000/hari</p>
+              <p class="item-price catalog-card-price">Rp600.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="drums" data-type="snare-drum" data-brand="tama">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/concert-snare-drum.png" alt="Snare drum konser" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/adams-timpani-640.webp" srcset="../assets/images/instruments/adams-timpani-640.webp 640w, ../assets/images/instruments/adams-timpani-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Adams Timpani" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">08</div>
+              <h3>Timpani</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Adams</span></div>
+              <p class="item-price catalog-card-price">Rp2.500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/adams-tubular-bells-640.webp" srcset="../assets/images/instruments/adams-tubular-bells-640.webp 640w, ../assets/images/instruments/adams-tubular-bells-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Adams Tubular Bells" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Tubular Bells</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Adams</span></div>
+              <p class="item-price catalog-card-price">Rp2.000.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/steelpan-640.webp" srcset="../assets/images/instruments/steelpan-640.webp 640w, ../assets/images/instruments/steelpan-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Steelpan" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Steelpan</h3>
+              <p class="item-price catalog-card-price">Rp800.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/isuzu-grancassa-40-640.webp" srcset="../assets/images/instruments/isuzu-grancassa-40-640.webp 640w, ../assets/images/instruments/isuzu-grancassa-40-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Isuzu Grancassa 40″" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Grancassa 40″</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Isuzu</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/pearl-bass-drum-26-640.webp" srcset="../assets/images/instruments/pearl-bass-drum-26-640.webp 640w, ../assets/images/instruments/pearl-bass-drum-26-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Pearl Bass Drum 26″" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Bass Drum 26″</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Pearl</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/ludwig-bass-drum-28-26-640.webp" srcset="../assets/images/instruments/ludwig-bass-drum-28-26-640.webp 640w, ../assets/images/instruments/ludwig-bass-drum-28-26-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Ludwig Bass Drum 28″ and 26″" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Bass Drum 28″ and 26″</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Ludwig</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/murat-diril-suspended-cymbal-640.webp" srcset="../assets/images/instruments/murat-diril-suspended-cymbal-640.webp 640w, ../assets/images/instruments/murat-diril-suspended-cymbal-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Murat Diril Sus. Cymbal" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Sus. Cymbal</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Murat Diril</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/zildjian-suspended-cymbal-640.webp" srcset="../assets/images/instruments/zildjian-suspended-cymbal-640.webp 640w, ../assets/images/instruments/zildjian-suspended-cymbal-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Zildjian Sus. Cymbal" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Sus. Cymbal</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Zildjian</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/sabian-crash-cymbal-16-640.webp" srcset="../assets/images/instruments/sabian-crash-cymbal-16-640.webp 640w, ../assets/images/instruments/sabian-crash-cymbal-16-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Sabian Crash Cymbal 16″" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Crash Cymbal 16″</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Sabian</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/zildjian-piatti-20-640.webp" srcset="../assets/images/instruments/zildjian-piatti-20-640.webp 640w, ../assets/images/instruments/zildjian-piatti-20-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Zildjian Piatti 20″" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Piatti 20″</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Zildjian</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/tama-concert-snare-640.webp" srcset="../assets/images/instruments/tama-concert-snare-640.webp 640w, ../assets/images/instruments/tama-concert-snare-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Tama Concert Snare" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Concert Snare</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Tama</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/pearl-piccolo-snare-640.webp" srcset="../assets/images/instruments/pearl-piccolo-snare-640.webp 640w, ../assets/images/instruments/pearl-piccolo-snare-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Pearl Piccolo Snare" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Piccolo Snare</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Pearl</span></div>
+              <p class="item-price catalog-card-price">Rp350.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/ludwig-hts-snare-640.webp" srcset="../assets/images/instruments/ludwig-hts-snare-640.webp 640w, ../assets/images/instruments/ludwig-hts-snare-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Ludwig HTS Snare" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>HTS Snare</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Ludwig</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/ludwig-snare-drum-640.webp" srcset="../assets/images/instruments/ludwig-snare-drum-640.webp 640w, ../assets/images/instruments/ludwig-snare-drum-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Ludwig Snare Drum" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
               <h3>Snare Drum</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Tama</span><span>Concert Series</span></div>
-              <p class="item-price catalog-card-price">Rp 400.000/hari</p>
+              <div class="item-meta catalog-card-meta"><span class="brand">Ludwig</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="cymbals" data-type="suspended-cymbal" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/suspended-cymbal.png" alt="Suspended cymbal dengan stand" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/chinese-gong-tam-tam-640.webp" srcset="../assets/images/instruments/chinese-gong-tam-tam-640.webp 640w, ../assets/images/instruments/chinese-gong-tam-tam-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Chinese Gong/Tam-tam" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">09</div>
-              <h3>Suspended Cymbal</h3>
-              <div class="item-meta catalog-card-meta"><span>Professional</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
+              <h3>Chinese Gong/Tam-tam</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="cymbals" data-type="piatti" data-brand="zildjian">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/piatti-20-inch.png" alt="Sepasang piatti 20 inci" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/windchimes-bar-640.webp" srcset="../assets/images/instruments/windchimes-bar-640.webp 640w, ../assets/images/instruments/windchimes-bar-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Windchimes" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">10</div>
-              <h3>Piatti</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Zildjian</span><span>20″</span></div>
-              <p class="item-price catalog-card-price">Rp 350.000/hari</p>
+              <h3>Windchimes</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="latin" data-type="conga" data-brand="latin-percussion">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/conga-three-piece.png" alt="Set conga tiga buah" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/windchimes-cluster-640.webp" srcset="../assets/images/instruments/windchimes-cluster-640.webp 640w, ../assets/images/instruments/windchimes-cluster-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Windchimes" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">11</div>
-              <h3>Conga</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand" aria-label="Latin Percussion">LP</span><span>Giovanni · 3 pcs</span></div>
-              <p class="item-price catalog-card-price">Rp 3.000.000/hari</p>
+              <h3>Windchimes</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="latin" data-type="conga" data-brand="meinl">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/conga-two-piece.png" alt="Set conga dua buah" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-double-bar-windchimes-640.webp" srcset="../assets/images/instruments/lp-double-bar-windchimes-640.webp 640w, ../assets/images/instruments/lp-double-bar-windchimes-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Double Bar Windchimes" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">12</div>
-              <h3>Conga</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span><span>Marathon · 2 pcs</span></div>
-              <p class="item-price catalog-card-price">Rp 700.000/hari</p>
+              <h3>Double Bar Windchimes</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="latin" data-type="bongo" data-brand="latin-percussion">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/bongo.png" alt="Sepasang bongo" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/steve-weiss-anvil-640.webp" srcset="../assets/images/instruments/steve-weiss-anvil-640.webp 640w, ../assets/images/instruments/steve-weiss-anvil-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Steveweiss Anvil" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">13</div>
-              <h3>Bongo</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand" aria-label="Latin Percussion">LP</span><span>Aspire</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
+              <h3>Anvil</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Steveweiss</span></div>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="cymbals" data-type="chinese-gong" data-brand="no-brand">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/chinese-gong.png" alt="Chinese gong dengan stand" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-samba-whistle-640.webp" srcset="../assets/images/instruments/lp-samba-whistle-640.webp 640w, ../assets/images/instruments/lp-samba-whistle-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Samba Whistle" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">14</div>
-              <h3>Chinese Gong</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">No Brand</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
+              <h3>Samba Whistle</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="cymbals" data-type="finger-cymbal" data-brand="meinl">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/finger-cymbals.png" alt="Sepasang finger cymbal" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/bar-bell-640.webp" srcset="../assets/images/instruments/bar-bell-640.webp 640w, ../assets/images/instruments/bar-bell-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Bar bell" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">15</div>
+              <h3>Bar bell</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-castanet-640.webp" srcset="../assets/images/instruments/lp-castanet-640.webp 640w, ../assets/images/instruments/lp-castanet-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Castanet" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Castanet</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/singing-bowl-640.webp" srcset="../assets/images/instruments/singing-bowl-640.webp 640w, ../assets/images/instruments/singing-bowl-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Singing Bowl" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Singing Bowl</h3>
+              <p class="item-price catalog-card-price">Rp500.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-vibraslap-640.webp" srcset="../assets/images/instruments/lp-vibraslap-640.webp 640w, ../assets/images/instruments/lp-vibraslap-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Vibraslap" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Vibraslap</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-finger-cymbal-640.webp" srcset="../assets/images/instruments/meinl-finger-cymbal-640.webp 640w, ../assets/images/instruments/meinl-finger-cymbal-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Finger Cymbal" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
               <h3>Finger Cymbal</h3>
               <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span></div>
-              <p class="item-price catalog-card-price">Rp 250.000/hari</p>
+              <p class="item-price catalog-card-price">Rp250.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="sleigh-bell" data-brand="latin-percussion">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/sleigh-bells.png" alt="Sleigh bells" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-bell-tree-640.webp" srcset="../assets/images/instruments/lp-bell-tree-640.webp 640w, ../assets/images/instruments/lp-bell-tree-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Bell Tree" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">16</div>
-              <h3>Sleigh Bell</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand" aria-label="Latin Percussion">LP</span></div>
-              <p class="item-price catalog-card-price">Rp 200.000/hari</p>
+              <h3>Bell Tree</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp400.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="tambourine" data-brand="latin-percussion">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/tambourine-skinless.png" alt="Tambourine tanpa membran" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/cp-sleigh-bells-640.webp" srcset="../assets/images/instruments/cp-sleigh-bells-640.webp 640w, ../assets/images/instruments/cp-sleigh-bells-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="CP Sleigh Bells" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">17</div>
-              <h3>Tambourine Skinless</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand" aria-label="Latin Percussion">LP</span><span>Skinless</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
+              <h3>Sleigh Bells</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">CP</span></div>
+              <p class="item-price catalog-card-price">Rp400.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="tambourine" data-brand="isuzu">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/tambourine-headed.png" alt="Tambourine dengan membran" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/flexatone-640.webp" srcset="../assets/images/instruments/flexatone-640.webp 640w, ../assets/images/instruments/flexatone-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Flexatone" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">18</div>
+              <h3>Flexatone</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-ratchet-640.webp" srcset="../assets/images/instruments/meinl-ratchet-640.webp 640w, ../assets/images/instruments/meinl-ratchet-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Ratchet" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Ratchet</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span></div>
+              <p class="item-price catalog-card-price">Rp400.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-guiro-640.webp" srcset="../assets/images/instruments/lp-guiro-640.webp 640w, ../assets/images/instruments/lp-guiro-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Guiro" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Guiro</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/triangle-640.webp" srcset="../assets/images/instruments/triangle-640.webp 640w, ../assets/images/instruments/triangle-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Triangle" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Triangle</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-kokiriko-640.webp" srcset="../assets/images/instruments/meinl-kokiriko-640.webp 640w, ../assets/images/instruments/meinl-kokiriko-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Kokiriko" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Kokiriko</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cricket-640.webp" srcset="../assets/images/instruments/lp-cricket-640.webp 640w, ../assets/images/instruments/lp-cricket-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cricket" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Cricket</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cowbell-640.webp" srcset="../assets/images/instruments/lp-cowbell-640.webp 640w, ../assets/images/instruments/lp-cowbell-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cowbell" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Cowbell</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-jam-block-640.webp" srcset="../assets/images/instruments/lp-jam-block-640.webp 640w, ../assets/images/instruments/lp-jam-block-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Jam Block" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Jam Block</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-shaker-soft-mint-640.webp" srcset="../assets/images/instruments/meinl-shaker-soft-mint-640.webp 640w, ../assets/images/instruments/meinl-shaker-soft-mint-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Shaker (Soft)" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Shaker (Soft)</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-dual-shaker-medium-640.webp" srcset="../assets/images/instruments/lp-dual-shaker-medium-640.webp 640w, ../assets/images/instruments/lp-dual-shaker-medium-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Dual Shaker (Medium)" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Dual Shaker (Medium)</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-shaker-soft-black-640.webp" srcset="../assets/images/instruments/meinl-shaker-soft-black-640.webp 640w, ../assets/images/instruments/meinl-shaker-soft-black-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Shaker (Soft)" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Shaker (Soft)</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lazer-shaker-hard-640.webp" srcset="../assets/images/instruments/lazer-shaker-hard-640.webp 640w, ../assets/images/instruments/lazer-shaker-hard-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Lazer Shaker (Hard)" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Shaker (Hard)</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Lazer</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-shaker-medium-gold-640.webp" srcset="../assets/images/instruments/lp-shaker-medium-gold-640.webp 640w, ../assets/images/instruments/lp-shaker-medium-gold-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Shaker (Medium)" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Shaker (Medium)</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-shaker-medium-aluminium-640.webp" srcset="../assets/images/instruments/lp-shaker-medium-aluminium-640.webp 640w, ../assets/images/instruments/lp-shaker-medium-aluminium-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Shaker (Medium)" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Shaker (Medium)</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cabasa-640.webp" srcset="../assets/images/instruments/lp-cabasa-640.webp 640w, ../assets/images/instruments/lp-cabasa-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cabasa" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Cabasa</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-shekere-640.webp" srcset="../assets/images/instruments/lp-shekere-640.webp 640w, ../assets/images/instruments/lp-shekere-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Shekere" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Shekere</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-maracas-brown-640.webp" srcset="../assets/images/instruments/lp-maracas-brown-640.webp 640w, ../assets/images/instruments/lp-maracas-brown-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Maracas" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Maracas</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-maracas-red-640.webp" srcset="../assets/images/instruments/lp-maracas-red-640.webp 640w, ../assets/images/instruments/lp-maracas-red-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Maracas" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Maracas</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-clave-640.webp" srcset="../assets/images/instruments/meinl-clave-640.webp 640w, ../assets/images/instruments/meinl-clave-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Clave" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Clave</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">Meinl</span></div>
+              <p class="item-price catalog-card-price">Rp200.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-clave-640.webp" srcset="../assets/images/instruments/lp-clave-640.webp 640w, ../assets/images/instruments/lp-clave-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Clave" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Clave</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp400.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cyclops-tambourine-640.webp" srcset="../assets/images/instruments/lp-cyclops-tambourine-640.webp 640w, ../assets/images/instruments/lp-cyclops-tambourine-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cyclops Tambourine" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Cyclops Tambourine</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/black-swamp-tambourine-640.webp" srcset="../assets/images/instruments/black-swamp-tambourine-640.webp 640w, ../assets/images/instruments/black-swamp-tambourine-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="BlackSwamp Tambourine" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
+              <h3>Tambourine</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">BlackSwamp</span></div>
+              <p class="item-price catalog-card-price">Rp400.000/hari</p>
+            </div>
+          </article>
+
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/isuzu-tambourine-640.webp" srcset="../assets/images/instruments/isuzu-tambourine-640.webp 640w, ../assets/images/instruments/isuzu-tambourine-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Isuzu Tambourine" width="1280" height="960" loading="lazy" decoding="async"></div>
+            <div class="item-body catalog-card-body">
               <h3>Tambourine</h3>
               <div class="item-meta catalog-card-meta"><span class="brand">Isuzu</span></div>
-              <p class="item-price catalog-card-price">Rp 250.000/hari</p>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="tambourine" data-brand="grover">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/tambourine-orchestral.png" alt="Tambourine orkestra" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/toys-640.webp" srcset="../assets/images/instruments/toys-640.webp 640w, ../assets/images/instruments/toys-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Toys" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">19</div>
-              <h3>Tambourine</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">Grover</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
+              <h3>Toys</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">NB</span></div>
+              <p class="item-price catalog-card-price">Rp150.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="wind-chimes" data-brand="no-brand">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/wind-chimes.png" alt="Wind chimes dengan stand" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="latin">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-conga-classic-640.webp" srcset="../assets/images/instruments/lp-conga-classic-640.webp 640w, ../assets/images/instruments/lp-conga-classic-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Conga Classic" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">20</div>
-              <h3>Wind Chimes</h3>
-              <div class="item-meta catalog-card-meta"><span class="brand">No Brand</span></div>
-              <p class="item-price catalog-card-price">Rp 150.000/hari</p>
+              <h3>Conga Classic</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp1.500.000/hari</p>
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="mallet" data-type="steel-pan" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/steel-pan.png" alt="Steel pan dengan stand" width="1450" height="1088" loading="lazy"></div>
+          <article class="item-card catalog-card" data-catalog-item data-category="latin">
+            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-bongo-aspire-640.webp" srcset="../assets/images/instruments/lp-bongo-aspire-640.webp 640w, ../assets/images/instruments/lp-bongo-aspire-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Bongo Aspire" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">21</div>
-              <h3>Steel Pan</h3>
-              <div class="item-meta catalog-card-meta"><span>Professional</span></div>
-              <p class="item-price catalog-card-price">Rp 800.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="shaker" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/shakers.png" alt="Set shaker perkusi" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">22</div>
-              <h3>Shaker</h3>
-              <div class="item-meta catalog-card-meta"><span>Classic</span></div>
-              <p class="item-price catalog-card-price">Rp 150.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="latin" data-type="salsa-cowbell" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/salsa-cowbell.png" alt="Salsa cowbell" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">23</div>
-              <h3>Salsa Cowbell</h3>
-              <div class="item-meta catalog-card-meta"><span>Classic</span></div>
-              <p class="item-price catalog-card-price">Rp 150.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary" data-type="rain-stick" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/rain-stick.png" alt="Rain stick" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">24</div>
-              <h3>Rain Stick</h3>
-              <div class="item-meta catalog-card-meta"><span>Natural</span></div>
-              <p class="item-price catalog-card-price">Rp 150.000/hari</p>
-            </div>
-          </article>
-
-          <article class="item-card catalog-card" data-catalog-item data-category="accessories" data-type="meja-perkusi" data-brand="">
-            <div class="item-media catalog-card-media"><img src="../assets/images/instruments/percussion-table.png" alt="Meja perkusi dengan stand" width="1450" height="1088" loading="lazy"></div>
-            <div class="item-body catalog-card-body">
-              <div class="item-index catalog-card-index" aria-hidden="true">25</div>
-              <h3>Meja Perkusi</h3>
-              <div class="item-meta catalog-card-meta"><span>Custom</span></div>
-              <p class="item-price catalog-card-price">Rp 300.000/hari</p>
+              <h3>Bongo Aspire</h3>
+              <div class="item-meta catalog-card-meta"><span class="brand">LP</span></div>
+              <p class="item-price catalog-card-price">Rp300.000/hari</p>
             </div>
           </article>
 
