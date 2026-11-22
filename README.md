@@ -38,7 +38,9 @@ Then open `http://localhost:8000/`.
 - The instrument catalog (`/koleksi`) mirrors the *Ninoy Percussion Rental Instrument E-Catalogue* PDF,
   which is the single source of truth: names, brands, prices, categories (Pitched, Unpitched,
   Auxiliary, Latin) and order all come from the PDF. Update the PDF first, then mirror it here;
-  homepage category cards link to the same four categories.
+  homepage category cards link to the same four categories. Three spelling fixes are applied on the
+  site but not yet in the PDF: Steve Weiss (PDF: "Steveweiss"), Black Swamp ("BlackSwamp") and
+  Bar Bell ("Bar bell").
 - Instrument photos are the real studio shots used in the PDF, cropped to 4:3 and served as
   `assets/images/instruments/<slug>-640.webp` (cards) and `-1280.webp` (detail dialog) via `srcset`.
 - Catalog filtering is intentionally simplified to instrument category; old `?category=mallet|drums|cymbals`
