@@ -21,10 +21,10 @@ Then open `http://localhost:8000/`.
 
 - Vanilla HTML/CSS/JS.
 - Responsive layouts validated from 320px through 1440px.
-- The landing hero shows two white snare drums (Drive: snare drum › snare 3 › Ninoy _ Catalog-85) on the
-  studio backdrop, extended to the left and faded to white behind the headline
-  (`hero-snare-drums-1600/2400/3000.webp`). Up to 980px wide the text sits on white with a separate crop
-  of the drums underneath (`hero-snare-drums-mobile-800/1200/1600.webp`).
+- The landing hero shows two white snare drums (Drive: snare drum › snare 3 › Ninoy _ Catalog-85). On screens
+  wider than 980px the drums (`hero-snare-drums-cut-600/900/1200.webp`, soft edges) stand centred in the space
+  between the headline and the right edge, on a background that matches the studio backdrop. Up to 980px the
+  text sits on white with a separate crop of the drums underneath (`hero-snare-drums-mobile-800/1200/1600.webp`).
 - Homepage collaborations use a fixed four-column, two-row desktop grid with equal-height cards;
   the project page uses the same compact 16:9 card treatment. Card photos come in `-400`, `-600` and
   `-800.webp` versions plus the full-size file, chosen through `srcset`/`sizes`; the project popup picks
@@ -41,6 +41,9 @@ Then open `http://localhost:8000/`.
   covers the card, added by `project.js` / `catalog.js`.
 - Project details live in three places that must be kept in sync: the homepage cards (`index.html`),
   the logo-strip dialog data (`assets/js/logo-projects.js`) and the project page (`project/index.html`).
+- Each project popup shows a "Lihat sumber" link to a public page that confirms the event. The URL is the card's
+  `data-source` attribute (homepage and project page) and the `sources` map in `logo-projects.js`; cards without one
+  (e.g. Greetings From Manny Moon) show no link.
 - The instrument catalog (`/koleksi`) mirrors the *Ninoy Percussion Rental Instrument E-Catalogue* PDF,
   which is the single source of truth: names, brands, prices, categories (Pitched, Unpitched,
   Auxiliary, Latin) and order all come from the PDF. Update the PDF first, then mirror it here;
@@ -57,7 +60,10 @@ Then open `http://localhost:8000/`.
 - Long catalog metadata uses single-line ellipsis truncation to preserve the inline price.
 - The testimonials section is hidden (`hidden` attribute) until approved client quotes are supplied;
   its markup and styles are kept so it can be switched back on.
-- Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License.
+- Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License. Use the
+  weights 400, 600, 700 and 800 only (the old Google Fonts setup rounded in-between weights to these).
+- CSS and JS links carry a version tag (`styles.css?v=2026112204`). When you change CSS or JS, raise that number in
+  all three pages so returning visitors don't mix a new page with an old cached file.
 - Canonical, Open Graph, JSON-LD, `sitemap.xml` and `robots.txt` use
   `https://prala-id.github.io/ninoy-percussion-rental/` until `percussionrental.id` is connected.
   To switch: add a `CNAME` file with the domain, set it in the repository's Pages settings, and replace
@@ -72,7 +78,7 @@ Keep this list up to date when adding third-party photos, so credits and permiss
 - The Music of Studio Ghibli (AFAID 2025): official Anime Festival Asia Indonesia material.
 - The Legends 10: Magic: TRUST Orchestra.
 - Hammersonic Festival 2024: Hammersonic website.
-- Kinderfield School Cinere: Kinderfield School website.
+- Kinderfield School Cinere: campus photo cropped from the banner on the Kinderfield–Highfield School website.
 - Malam 100 Cinta 2025: XLSMART website.
 - Festival Cahaya Kebaikan: Tehbotol Sosro official YouTube channel.
 - Perak (album cover): Thee Marloes official YouTube channel.

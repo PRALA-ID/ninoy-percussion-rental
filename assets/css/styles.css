@@ -438,10 +438,14 @@ blockquote,
 
 /* Hero */
 .hero {
+  /* where the headline block ends: container edge + copy padding + widest line (the subtitle) */
+  --hero-text-end: calc(max(1.5rem, (100vw - 1120px) / 2) + clamp(1.75rem, 3vw, 2.75rem) + clamp(29.3rem, 38.09vw, 32.8rem));
   position: relative;
   overflow: hidden;
   padding-block: 0;
-  background: #fff;
+  background:
+    linear-gradient(90deg, #fff 0, #fff var(--hero-text-end), rgba(255, 255, 255, 0) calc(var(--hero-text-end) + 14vw)),
+    linear-gradient(180deg, #f5f8ff 0%, #f3f7ff 16%, #edf1fd 58%, #e8eaf9 100%);
 }
 
 .hero-grid {
@@ -511,31 +515,31 @@ blockquote,
   display: none;
 }
 
+/* Drums sit centred in the space between the headline and the right edge, standing on the bottom */
 .hero-media {
+  position: absolute;
   z-index: 0;
   grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
+  inset: 0 0 0 var(--hero-text-end);
+  display: flex;
   min-width: 0;
   margin: 0;
+  align-items: flex-end;
+  justify-content: center;
   overflow: hidden;
-  aspect-ratio: auto;
   border: 0;
   border-radius: inherit;
-  background: #fff;
 }
 
 .hero-media picture {
   display: block;
-  width: 100%;
-  height: 100%;
+  height: 84%;
 }
 
 .hero-media img {
-  width: 100%;
+  width: auto;
+  max-width: none;
   height: 100%;
-  object-fit: cover;
-  object-position: 85% 45%;
 }
 
 /* Credibility */
@@ -1024,7 +1028,7 @@ blockquote,
   color: var(--primary);
   cursor: pointer;
   font-size: 0.94rem;
-  font-weight: 750;
+  font-weight: 800;
   line-height: 1.45;
   list-style: none;
 }
@@ -1473,7 +1477,7 @@ blockquote,
 .project-dialog-context {
   color: var(--muted);
   font-size: 0.86rem;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .project-dialog-role {
@@ -1763,15 +1767,28 @@ blockquote,
     transform: none;
   }
 
+  .hero {
+    background: #fff;
+  }
+
   .hero-media {
+    position: static;
+    display: block;
     grid-area: 2 / 1;
     height: auto;
   }
 
+  .hero-media picture {
+    width: 100%;
+    height: auto;
+  }
+
   .hero-media img {
+    width: 100%;
     height: auto;
     max-height: 420px;
     aspect-ratio: 8 / 5;
+    object-fit: cover;
     object-position: 50% 100%;
   }
 
@@ -2542,5 +2559,206 @@ blockquote,
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* ---------- Readability and small-screen fixes ---------- */
+
+/* Card text wraps onto the next line instead of being cut off with "…" */
+.project-track .project-card h3,
+.project-track .project-context,
+.project-track .project-role,
+.project-track .project-date,
+.project-grid .project-card h2,
+.project-grid .project-context,
+.project-grid .project-role,
+.project-grid .project-date,
+.item-card h2,
+.item-card h3,
+.item-meta {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.project-card-body {
+  height: auto;
+  min-height: 110px;
+}
+
+/* Smallest card text stays readable */
+.project-track .project-context,
+.project-track .project-role,
+.project-track .project-date,
+.project-grid .project-context,
+.project-grid .project-role,
+.project-grid .project-date {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.item-meta,
+.item-price {
+  font-size: 0.75rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Footer links: taller tap areas, same look */
+.footer-links {
+  gap: 0;
+}
+
+.footer-links a {
+  display: flex;
+  min-height: 2.25rem;
+  align-items: center;
+}
+
+@media (min-width: 981px) and (max-width: 1199px) {
+  .project-track .project-context,
+  .project-track .project-role,
+  .project-track .project-date {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .number-item dt {
+    font-size: 0.7rem;
+  }
+
+  .project-row .project-card h3,
+  .project-grid .project-card h2 {
+    font-size: 0.84rem;
+  }
+
+  .project-row .project-context,
+  .project-row .project-role,
+  .project-row .project-date,
+  .project-grid .project-context,
+  .project-grid .project-role,
+  .project-grid .project-date {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .catalog-grid .item-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .item-meta,
+  .item-price {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-row .project-card-body {
+    height: auto;
+    min-height: 96px;
+    flex: 1 0 auto;
+  }
+
+  .project-row .project-card h3,
+  .project-grid .project-card h2 {
+    font-size: 0.82rem;
+  }
+
+  .project-row .project-context,
+  .project-row .project-role,
+  .project-row .project-date,
+  .project-grid .project-context,
+  .project-grid .project-role,
+  .project-grid .project-date {
+    font-size: 0.69rem;
+    line-height: 1.3;
+  }
+
+  .item-card h2,
+  .item-card h3 {
+    font-size: 0.88rem;
+    white-space: normal;
+  }
+
+  .item-meta,
+  .item-price {
+    font-size: 0.69rem;
+  }
+}
+
+/* Smallest phones: hero spans the full width and the title fits */
+@media (max-width: 350px) {
+  .hero-grid {
+    width: 100vw;
+  }
+
+  .hero h1 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Phones turned sideways: popup photo beside the text so everything fits */
+@media (orientation: landscape) and (max-height: 520px) {
+  .project-dialog {
+    width: min(46rem, calc(100% - 2rem));
+  }
+
+  .project-dialog-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .project-dialog-media,
+  .catalog-dialog .project-dialog-media {
+    height: 100%;
+    max-height: calc(100dvh - 2rem);
+    aspect-ratio: auto;
+  }
+
+  .project-dialog-body {
+    padding: 1rem 3.5rem 1rem 1.25rem;
+  }
+}
+
+/* "Lihat sumber" link in project popups */
+.project-dialog-source {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--primary);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(14, 53, 35, 0.35);
+  text-underline-offset: 0.2em;
+}
+
+.project-dialog-source:hover {
+  text-decoration-color: currentColor;
+}
+
+.project-dialog-source-slot {
+  margin: 0.6rem 0 0;
+}
+
+/* Swipe arrows sit on the edge between photo and text, as before the cards grew taller */
+@media (max-width: 680px) {
+  .mobile-scroll-cue {
+    top: calc(0.15rem + 101.25px);
+  }
+}
+
+@media (max-width: 430px) {
+  .mobile-scroll-cue {
+    top: calc(0.15rem + 88.9px);
   }
 }

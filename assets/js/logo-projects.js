@@ -17,7 +17,39 @@
     'the-music-of-studio-ghibli': ['The Music of STUDIO GHIBLI', 'AFAID 2025', 'Rental', 'Jun 2025 · JCC', 'assets/images/the-music-of-studio-ghibli-afaid-2025.webp']
   };
 
+  // Public pages where visitors can verify each project ("Lihat sumber").
+  const sources = {
+    'senja-teduh-pelita': 'https://indonesiakaya.com/agenda-budaya/musikal-senja-teduh-pelita-hadirkan-petualangan-emosional-masa-depan-bumi/',
+    'symphonesia-bangga-indonesia': 'https://billboard-indonesia.com/scenes/events/2024/07/17/putri-ariani-voice-of-baceprot-tampil-di-erwin-gutawa-orchestra-symphonesia-bangga-indonesia/',
+    'java-jazz-on-the-move': 'https://puriindahmall.co.id/news/java-jazz-on-the-move',
+    'hammersonic-festival-2024': 'https://www.detik.com/pop/music/d-7326622/wadah-besar-hajatan-musik-cadas-hammersonic-2024-buat-penonton-berkesan',
+    'erwin-gutawa-karaokestra': 'https://www.fortuneidn.com/news/line-up-pestapora-2024-ada-tulus-hingga-voice-of-baceprot-00-98121-gv5y0p',
+    'festival-cahaya-kebaikan': 'https://www.tehbotolsosro.com/aktivitas/telusuri/berita/50-tahun-perjalanan-emas-tehbotol-sosro-menyebar-cahaya-kebaikan',
+    'malam-100-cinta-2024': 'https://koran-jakarta.com/2024-11-27/pertunjukkan-konser-malam-100-cinta',
+    'the-music-of-studio-ghibli': 'https://animefestival.asia/afaid25/concert/'
+  };
+
   const closeButton = dialog.querySelector('.project-dialog-close');
+  // "Lihat sumber" link: built only when the project has a public source page.
+  const sourceSlot = dialog.querySelector('.project-dialog-source-slot');
+  const setSource = (url, title) => {
+    if (!sourceSlot) return;
+    sourceSlot.replaceChildren();
+    sourceSlot.hidden = !url;
+    if (!url) return;
+    const link = document.createElement('a');
+    link.className = 'project-dialog-source';
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', `Lihat sumber ${title} (tab baru)`);
+    link.append('Lihat sumber ');
+    const arrow = document.createElement('span');
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+    link.append(arrow);
+    sourceSlot.append(link);
+  };
   const dialogMedia = dialog.querySelector('.project-dialog-media');
   const dialogImage = dialog.querySelector('.project-dialog-media img');
   const dialogTitle = dialog.querySelector('#logo-project-dialog-title');
@@ -40,6 +72,7 @@
       dialogContext.textContent = context;
       dialogRole.textContent = role;
       dialogDate.textContent = date;
+      setSource(sources[link.hash.slice(1)] || '', title);
       dialogMedia?.classList.toggle('project-dialog-media--logo', Boolean(logo));
       dialogImage.className = logo === 'logo-invert' ? 'logo-invert' : '';
       dialogImage.src = image;
