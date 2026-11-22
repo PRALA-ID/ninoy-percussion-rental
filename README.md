@@ -25,12 +25,17 @@ Then open `http://localhost:8000/`.
   remains aligned to the centered desktop content guide. Screens up to 600px wide get a crop of the
   same photo (`smartfren-malam-100-cinta-2024-hero-mobile.webp`) so no event logo sits behind the headline.
 - Homepage collaborations use a fixed four-column, two-row desktop grid with equal-height cards;
-  the project page uses the same compact 16:9 card treatment. Card photos load an `-800.webp`
-  version through `srcset`; the detail dialog uses the full-size file.
+  the project page uses the same compact 16:9 card treatment. Card photos come in `-400`, `-600` and
+  `-800.webp` versions plus the full-size file, chosen through `srcset`/`sizes`; the project popup picks
+  from the same set at popup size, and the logo-strip popup uses the full-size file.
 - Project service labels are Rental, Collaboration, or Rental & Collaboration.
-- Projects without an event photo show the client's logo on a dark tile (`project-card-media--logo`),
-  or the client's name where no logo is available (Thee Marloes, Rumah Perkusi). Replace the tile with
-  a photo when one is supplied.
+- Every visible project has a photo. A card without one can show the client's logo on a dark tile
+  (`project-card-media--logo`) or the client's name (`project-wordmark`); the hidden Pageant
+  (Mānoa Valley Theatre logo) and Steel Pan (Rumah Perkusi name) cards use these.
+- Hidden project cards (`hidden` attribute, project page only): BYU–Hawaii Salsa Orchestra & Street Band,
+  Pageant Musical and Steel Pan. Remove `hidden` to show one again. The homepage numbers
+  (15+ Performance, 5+ Rental Clients) are typed by hand; update them when projects are shown or hidden.
+- Client logos in the homepage strip are stored at about 3× their display size.
 - Project and instrument cards open their detail popup through an invisible button (`.card-open`) that
   covers the card, added by `project.js` / `catalog.js`.
 - Project details live in three places that must be kept in sync: the homepage cards (`index.html`),
