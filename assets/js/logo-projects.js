@@ -13,7 +13,7 @@
     'hammersonic-festival-2024': ['Hammersonic Festival 2024', 'Ravel Entertainment', 'Rental', 'May 2024 · Pantai Carnaval Ancol', 'assets/images/hammersonic-festival-2024.webp'],
     'erwin-gutawa-karaokestra': ['Erwin Gutawa Karaokestra', 'Pestapora 2024', 'Collaboration', 'Sep 2024 · JIExpo Kemayoran', 'assets/images/erwin-gutawa-karaokestra-pestapora-2024.webp'],
     'festival-cahaya-kebaikan': ['Festival Cahaya Kebaikan', '50 Tahun Tehbotol Sosro', 'Collaboration', 'Sep 2024 · Senayan Park', 'assets/images/festival-cahaya-kebaikan-2024.webp'],
-    'malam-100-cinta-2024': ['Malam 100 Cinta 2024', 'SMARTFREN', 'Collaboration', 'Nov 2024 · JIEXPO', 'assets/images/smartfren-malam-100-cinta-2024.webp'],
+    'malam-100-cinta-2024': ['Malam 100 Cinta 2024', 'SMARTFREN', 'Collaboration', 'Nov 2024 · JIExpo Kemayoran', 'assets/images/smartfren-malam-100-cinta-2024.webp'],
     'the-music-of-studio-ghibli': ['The Music of STUDIO GHIBLI', 'AFAID 2025', 'Rental', 'Jun 2025 · JCC', 'assets/images/the-music-of-studio-ghibli-afaid-2025.webp']
   };
 
