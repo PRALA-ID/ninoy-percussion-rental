@@ -54,3 +54,21 @@ Then open `http://localhost:8000/`.
   `https://prala-id.github.io/ninoy-percussion-rental/` until `percussionrental.id` is connected.
   To switch: add a `CNAME` file with the domain, set it in the repository's Pages settings, and replace
   that base URL in the three pages, `sitemap.xml` and `robots.txt`.
+
+## Photo sources
+
+Keep this list up to date when adding third-party photos, so credits and permissions can be traced.
+
+- Instrument photos: Ninoy Percussion Rental studio shoot (same shots as the e-catalogue PDF).
+- Senja Teduh Pelita: internal photo.
+- The Music of Studio Ghibli (AFAID 2025): official Anime Festival Asia Indonesia material.
+- The Legends 10: Magic: TRUST Orchestra.
+- Hammersonic Festival 2024: Hammersonic website.
+- Kinderfield School Cinere: Kinderfield School website.
+- Malam 100 Cinta 2025: XLSMART website.
+- Festival Cahaya Kebaikan: Tehbotol Sosro official YouTube channel.
+- Perak (album cover): Thee Marloes official YouTube channel.
+- BYU–Hawaii Culture Night 2017 and the December 2017 music devotional (used for the Christmas Concert card):
+  Ke Alaka'i, BYU–Hawaii's student news site.
+- BYU–Hawaii Shaka Steel: BYU–Hawaii performing arts (CLPA) Shaka Steel page.
+- Client logos: each organization's own website or brand materials.
