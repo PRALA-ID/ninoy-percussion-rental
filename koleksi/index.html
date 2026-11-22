@@ -13,9 +13,8 @@
   <meta property="og:url" content="https://percussionrental.id/koleksi">
   <meta name="theme-color" content="#0e3523">
   <link rel="icon" type="image/png" href="../assets/logo/percussion-rental-favicon-rounded.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body class="catalog-page">
@@ -26,15 +25,15 @@
       <a class="brand-logo" href="../index.html" aria-label="Percussion Rental — Beranda">
         <img src="../assets/logo/percussion-rental-logo-horizontal-trim.webp" alt="Percussion Rental">
       </a>
-      <nav class="nav-links" id="site-navigation" aria-label="Navigasi utama">
+      <nav class="nav-links" id="primary-navigation" aria-label="Navigasi utama">
         <a href="index.html" aria-current="page">Koleksi</a>
         <a href="../project/index.html">Project</a>
         <a href="../index.html#cara-sewa">Cara Sewa</a>
         <a href="../index.html#faq">FAQ</a>
         <a class="btn btn-primary mobile-nav-cta" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener noreferrer">WhatsApp Kami</a>
       </nav>
-      <a class="btn btn-primary nav-cta js-track-cta js-track-whatsapp" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener">WhatsApp Kami</a>
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-controls="site-navigation" aria-expanded="false">
+      <a class="btn btn-primary nav-cta" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener noreferrer">WhatsApp Kami</a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-controls="primary-navigation" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <path d="M4 7h16M4 12h16M4 17h16"/>
         </svg>
@@ -68,8 +67,10 @@
           </div>
         </fieldset>
 
+        <p class="catalog-count" id="catalog-count" role="status">57 instrumen</p>
+
         <div class="item-grid catalog-grid" id="catalog-grid">
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="musser-glockenspiel" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/musser-glockenspiel-640.webp" srcset="../assets/images/instruments/musser-glockenspiel-640.webp 640w, ../assets/images/instruments/musser-glockenspiel-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Musser Glockenspiel" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Glockenspiel</h3>
@@ -78,7 +79,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="royale-vibraphone" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/royale-vibraphone-640.webp" srcset="../assets/images/instruments/royale-vibraphone-640.webp 640w, ../assets/images/instruments/royale-vibraphone-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Royale Vibraphone" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Vibraphone</h3>
@@ -87,7 +88,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="royale-marimba" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/royale-marimba-640.webp" srcset="../assets/images/instruments/royale-marimba-640.webp 640w, ../assets/images/instruments/royale-marimba-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Royale Marimba" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Marimba</h3>
@@ -96,7 +97,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="adams-xylophone" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/adams-xylophone-640.webp" srcset="../assets/images/instruments/adams-xylophone-640.webp 640w, ../assets/images/instruments/adams-xylophone-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Adams Xylophone" width="1280" height="960" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Xylophone</h3>
@@ -105,7 +106,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="adams-timpani" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/adams-timpani-640.webp" srcset="../assets/images/instruments/adams-timpani-640.webp 640w, ../assets/images/instruments/adams-timpani-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Adams Timpani" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Timpani</h3>
@@ -114,7 +115,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="adams-tubular-bells" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/adams-tubular-bells-640.webp" srcset="../assets/images/instruments/adams-tubular-bells-640.webp 640w, ../assets/images/instruments/adams-tubular-bells-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Adams Tubular Bells" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Tubular Bells</h3>
@@ -123,7 +124,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="pitched">
+          <article class="item-card catalog-card" id="steelpan" data-catalog-item data-category="pitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/steelpan-640.webp" srcset="../assets/images/instruments/steelpan-640.webp 640w, ../assets/images/instruments/steelpan-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Steelpan" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Steelpan</h3>
@@ -131,7 +132,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="isuzu-grancassa-40" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/isuzu-grancassa-40-640.webp" srcset="../assets/images/instruments/isuzu-grancassa-40-640.webp 640w, ../assets/images/instruments/isuzu-grancassa-40-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Isuzu Grancassa 40″" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Grancassa 40″</h3>
@@ -140,7 +141,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="pearl-bass-drum-26" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/pearl-bass-drum-26-640.webp" srcset="../assets/images/instruments/pearl-bass-drum-26-640.webp 640w, ../assets/images/instruments/pearl-bass-drum-26-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Pearl Bass Drum 26″" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Bass Drum 26″</h3>
@@ -149,7 +150,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="ludwig-bass-drum-28-26" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/ludwig-bass-drum-28-26-640.webp" srcset="../assets/images/instruments/ludwig-bass-drum-28-26-640.webp 640w, ../assets/images/instruments/ludwig-bass-drum-28-26-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Ludwig Bass Drum 28″ and 26″" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Bass Drum 28″ and 26″</h3>
@@ -158,7 +159,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="murat-diril-suspended-cymbal" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/murat-diril-suspended-cymbal-640.webp" srcset="../assets/images/instruments/murat-diril-suspended-cymbal-640.webp 640w, ../assets/images/instruments/murat-diril-suspended-cymbal-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Murat Diril Sus. Cymbal" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Sus. Cymbal</h3>
@@ -167,7 +168,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="zildjian-suspended-cymbal" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/zildjian-suspended-cymbal-640.webp" srcset="../assets/images/instruments/zildjian-suspended-cymbal-640.webp 640w, ../assets/images/instruments/zildjian-suspended-cymbal-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Zildjian Sus. Cymbal" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Sus. Cymbal</h3>
@@ -176,7 +177,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="sabian-crash-cymbal-16" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/sabian-crash-cymbal-16-640.webp" srcset="../assets/images/instruments/sabian-crash-cymbal-16-640.webp 640w, ../assets/images/instruments/sabian-crash-cymbal-16-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Sabian Crash Cymbal 16″" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Crash Cymbal 16″</h3>
@@ -185,7 +186,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="zildjian-piatti-20" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/zildjian-piatti-20-640.webp" srcset="../assets/images/instruments/zildjian-piatti-20-640.webp 640w, ../assets/images/instruments/zildjian-piatti-20-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Zildjian Piatti 20″" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Piatti 20″</h3>
@@ -194,7 +195,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="tama-concert-snare" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/tama-concert-snare-640.webp" srcset="../assets/images/instruments/tama-concert-snare-640.webp 640w, ../assets/images/instruments/tama-concert-snare-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Tama Concert Snare" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Concert Snare</h3>
@@ -203,7 +204,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="pearl-piccolo-snare" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/pearl-piccolo-snare-640.webp" srcset="../assets/images/instruments/pearl-piccolo-snare-640.webp 640w, ../assets/images/instruments/pearl-piccolo-snare-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Pearl Piccolo Snare" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Piccolo Snare</h3>
@@ -212,7 +213,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="ludwig-hts-snare" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/ludwig-hts-snare-640.webp" srcset="../assets/images/instruments/ludwig-hts-snare-640.webp 640w, ../assets/images/instruments/ludwig-hts-snare-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Ludwig HTS Snare" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>HTS Snare</h3>
@@ -221,7 +222,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="ludwig-snare-drum" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/ludwig-snare-drum-640.webp" srcset="../assets/images/instruments/ludwig-snare-drum-640.webp 640w, ../assets/images/instruments/ludwig-snare-drum-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Ludwig Snare Drum" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Snare Drum</h3>
@@ -230,7 +231,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="unpitched">
+          <article class="item-card catalog-card" id="chinese-gong-tam-tam" data-catalog-item data-category="unpitched">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/chinese-gong-tam-tam-640.webp" srcset="../assets/images/instruments/chinese-gong-tam-tam-640.webp 640w, ../assets/images/instruments/chinese-gong-tam-tam-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Chinese Gong/Tam-tam" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Chinese Gong/Tam-tam</h3>
@@ -239,7 +240,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="windchimes-bar" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/windchimes-bar-640.webp" srcset="../assets/images/instruments/windchimes-bar-640.webp 640w, ../assets/images/instruments/windchimes-bar-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Windchimes" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Windchimes</h3>
@@ -248,7 +249,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="windchimes-cluster" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/windchimes-cluster-640.webp" srcset="../assets/images/instruments/windchimes-cluster-640.webp 640w, ../assets/images/instruments/windchimes-cluster-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Windchimes" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Windchimes</h3>
@@ -257,7 +258,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-double-bar-windchimes" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-double-bar-windchimes-640.webp" srcset="../assets/images/instruments/lp-double-bar-windchimes-640.webp 640w, ../assets/images/instruments/lp-double-bar-windchimes-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Double Bar Windchimes" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Double Bar Windchimes</h3>
@@ -266,7 +267,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="steve-weiss-anvil" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/steve-weiss-anvil-640.webp" srcset="../assets/images/instruments/steve-weiss-anvil-640.webp 640w, ../assets/images/instruments/steve-weiss-anvil-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Steveweiss Anvil" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Anvil</h3>
@@ -275,7 +276,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-samba-whistle" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-samba-whistle-640.webp" srcset="../assets/images/instruments/lp-samba-whistle-640.webp 640w, ../assets/images/instruments/lp-samba-whistle-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Samba Whistle" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Samba Whistle</h3>
@@ -284,7 +285,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="bar-bell" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/bar-bell-640.webp" srcset="../assets/images/instruments/bar-bell-640.webp 640w, ../assets/images/instruments/bar-bell-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Bar bell" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Bar bell</h3>
@@ -293,7 +294,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-castanet" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-castanet-640.webp" srcset="../assets/images/instruments/lp-castanet-640.webp 640w, ../assets/images/instruments/lp-castanet-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Castanet" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Castanet</h3>
@@ -302,7 +303,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="singing-bowl" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/singing-bowl-640.webp" srcset="../assets/images/instruments/singing-bowl-640.webp 640w, ../assets/images/instruments/singing-bowl-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Singing Bowl" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Singing Bowl</h3>
@@ -310,7 +311,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-vibraslap" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-vibraslap-640.webp" srcset="../assets/images/instruments/lp-vibraslap-640.webp 640w, ../assets/images/instruments/lp-vibraslap-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Vibraslap" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Vibraslap</h3>
@@ -319,7 +320,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="meinl-finger-cymbal" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-finger-cymbal-640.webp" srcset="../assets/images/instruments/meinl-finger-cymbal-640.webp 640w, ../assets/images/instruments/meinl-finger-cymbal-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Finger Cymbal" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Finger Cymbal</h3>
@@ -328,7 +329,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-bell-tree" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-bell-tree-640.webp" srcset="../assets/images/instruments/lp-bell-tree-640.webp 640w, ../assets/images/instruments/lp-bell-tree-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Bell Tree" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Bell Tree</h3>
@@ -337,7 +338,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="cp-sleigh-bells" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/cp-sleigh-bells-640.webp" srcset="../assets/images/instruments/cp-sleigh-bells-640.webp 640w, ../assets/images/instruments/cp-sleigh-bells-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="CP Sleigh Bells" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Sleigh Bells</h3>
@@ -346,7 +347,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="flexatone" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/flexatone-640.webp" srcset="../assets/images/instruments/flexatone-640.webp 640w, ../assets/images/instruments/flexatone-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Flexatone" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Flexatone</h3>
@@ -355,7 +356,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="meinl-ratchet" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-ratchet-640.webp" srcset="../assets/images/instruments/meinl-ratchet-640.webp 640w, ../assets/images/instruments/meinl-ratchet-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Ratchet" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Ratchet</h3>
@@ -364,7 +365,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-guiro" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-guiro-640.webp" srcset="../assets/images/instruments/lp-guiro-640.webp 640w, ../assets/images/instruments/lp-guiro-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Guiro" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Guiro</h3>
@@ -373,7 +374,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="triangle" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/triangle-640.webp" srcset="../assets/images/instruments/triangle-640.webp 640w, ../assets/images/instruments/triangle-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Triangle" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Triangle</h3>
@@ -382,7 +383,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="meinl-kokiriko" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-kokiriko-640.webp" srcset="../assets/images/instruments/meinl-kokiriko-640.webp 640w, ../assets/images/instruments/meinl-kokiriko-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Kokiriko" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Kokiriko</h3>
@@ -391,7 +392,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-cricket" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cricket-640.webp" srcset="../assets/images/instruments/lp-cricket-640.webp 640w, ../assets/images/instruments/lp-cricket-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cricket" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Cricket</h3>
@@ -400,7 +401,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-cowbell" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cowbell-640.webp" srcset="../assets/images/instruments/lp-cowbell-640.webp 640w, ../assets/images/instruments/lp-cowbell-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cowbell" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Cowbell</h3>
@@ -409,7 +410,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-jam-block" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-jam-block-640.webp" srcset="../assets/images/instruments/lp-jam-block-640.webp 640w, ../assets/images/instruments/lp-jam-block-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Jam Block" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Jam Block</h3>
@@ -418,7 +419,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="meinl-shaker-soft-mint" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-shaker-soft-mint-640.webp" srcset="../assets/images/instruments/meinl-shaker-soft-mint-640.webp 640w, ../assets/images/instruments/meinl-shaker-soft-mint-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Shaker (Soft)" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Shaker (Soft)</h3>
@@ -427,7 +428,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-dual-shaker-medium" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-dual-shaker-medium-640.webp" srcset="../assets/images/instruments/lp-dual-shaker-medium-640.webp 640w, ../assets/images/instruments/lp-dual-shaker-medium-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Dual Shaker (Medium)" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Dual Shaker (Medium)</h3>
@@ -436,7 +437,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="meinl-shaker-soft-black" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-shaker-soft-black-640.webp" srcset="../assets/images/instruments/meinl-shaker-soft-black-640.webp 640w, ../assets/images/instruments/meinl-shaker-soft-black-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Shaker (Soft)" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Shaker (Soft)</h3>
@@ -445,7 +446,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lazer-shaker-hard" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lazer-shaker-hard-640.webp" srcset="../assets/images/instruments/lazer-shaker-hard-640.webp 640w, ../assets/images/instruments/lazer-shaker-hard-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Lazer Shaker (Hard)" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Shaker (Hard)</h3>
@@ -454,7 +455,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-shaker-medium-gold" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-shaker-medium-gold-640.webp" srcset="../assets/images/instruments/lp-shaker-medium-gold-640.webp 640w, ../assets/images/instruments/lp-shaker-medium-gold-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Shaker (Medium)" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Shaker (Medium)</h3>
@@ -463,7 +464,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-shaker-medium-aluminium" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-shaker-medium-aluminium-640.webp" srcset="../assets/images/instruments/lp-shaker-medium-aluminium-640.webp 640w, ../assets/images/instruments/lp-shaker-medium-aluminium-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Shaker (Medium)" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Shaker (Medium)</h3>
@@ -472,7 +473,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-cabasa" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cabasa-640.webp" srcset="../assets/images/instruments/lp-cabasa-640.webp 640w, ../assets/images/instruments/lp-cabasa-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cabasa" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Cabasa</h3>
@@ -481,7 +482,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-shekere" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-shekere-640.webp" srcset="../assets/images/instruments/lp-shekere-640.webp 640w, ../assets/images/instruments/lp-shekere-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Shekere" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Shekere</h3>
@@ -490,7 +491,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-maracas-brown" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-maracas-brown-640.webp" srcset="../assets/images/instruments/lp-maracas-brown-640.webp 640w, ../assets/images/instruments/lp-maracas-brown-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Maracas" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Maracas</h3>
@@ -499,7 +500,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-maracas-red" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-maracas-red-640.webp" srcset="../assets/images/instruments/lp-maracas-red-640.webp 640w, ../assets/images/instruments/lp-maracas-red-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Maracas" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Maracas</h3>
@@ -508,7 +509,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="meinl-clave" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/meinl-clave-640.webp" srcset="../assets/images/instruments/meinl-clave-640.webp 640w, ../assets/images/instruments/meinl-clave-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Meinl Clave" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Clave</h3>
@@ -517,7 +518,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-clave" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-clave-640.webp" srcset="../assets/images/instruments/lp-clave-640.webp 640w, ../assets/images/instruments/lp-clave-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Clave" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Clave</h3>
@@ -526,7 +527,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="lp-cyclops-tambourine" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-cyclops-tambourine-640.webp" srcset="../assets/images/instruments/lp-cyclops-tambourine-640.webp 640w, ../assets/images/instruments/lp-cyclops-tambourine-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Cyclops Tambourine" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Cyclops Tambourine</h3>
@@ -535,7 +536,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="black-swamp-tambourine" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/black-swamp-tambourine-640.webp" srcset="../assets/images/instruments/black-swamp-tambourine-640.webp 640w, ../assets/images/instruments/black-swamp-tambourine-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="BlackSwamp Tambourine" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Tambourine</h3>
@@ -544,7 +545,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="isuzu-tambourine" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/isuzu-tambourine-640.webp" srcset="../assets/images/instruments/isuzu-tambourine-640.webp 640w, ../assets/images/instruments/isuzu-tambourine-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Isuzu Tambourine" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Tambourine</h3>
@@ -553,7 +554,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="auxiliary">
+          <article class="item-card catalog-card" id="toys" data-catalog-item data-category="auxiliary">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/toys-640.webp" srcset="../assets/images/instruments/toys-640.webp 640w, ../assets/images/instruments/toys-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="Toys" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Toys</h3>
@@ -562,7 +563,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="latin">
+          <article class="item-card catalog-card" id="lp-conga-classic" data-catalog-item data-category="latin">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-conga-classic-640.webp" srcset="../assets/images/instruments/lp-conga-classic-640.webp 640w, ../assets/images/instruments/lp-conga-classic-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Conga Classic" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Conga Classic</h3>
@@ -571,7 +572,7 @@
             </div>
           </article>
 
-          <article class="item-card catalog-card" data-catalog-item data-category="latin">
+          <article class="item-card catalog-card" id="lp-bongo-aspire" data-catalog-item data-category="latin">
             <div class="item-media catalog-card-media"><img src="../assets/images/instruments/lp-bongo-aspire-640.webp" srcset="../assets/images/instruments/lp-bongo-aspire-640.webp 640w, ../assets/images/instruments/lp-bongo-aspire-1280.webp 1280w" sizes="(min-width: 1200px) 298px, (min-width: 821px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)" alt="LP Bongo Aspire" width="1280" height="960" loading="lazy" decoding="async"></div>
             <div class="item-body catalog-card-body">
               <h3>Bongo Aspire</h3>
@@ -590,7 +591,7 @@
         <h2 class="section-title" id="catalog-cta-title"><span class="title-line">Butuh Perkusi untuk</span><span class="title-line">Produksi Anda?</span></h2>
         <p class="section-subtitle">Cek ketersediaan dan diskusikan kebutuhan Anda.</p>
         <div class="actions">
-          <a class="btn btn-primary js-track-cta js-track-whatsapp" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener noreferrer">
             WhatsApp Kami
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
           </a>
@@ -609,6 +610,7 @@
         <h2 id="catalog-dialog-title"></h2>
         <p class="catalog-dialog-meta"></p>
         <p class="catalog-dialog-price"></p>
+        <a class="btn btn-primary catalog-dialog-cta" href="https://wa.me/6281128889804" target="_blank" rel="noopener noreferrer">Tanya Ketersediaan via WhatsApp</a>
       </div>
     </div>
   </dialog>
@@ -623,15 +625,15 @@
         <div class="footer-group">
           <h3>Kontak</h3>
           <div class="footer-links">
-            <a href="https://instagram.com/percussionrental" target="_blank" rel="noopener">Instagram · @percussionrental</a>
-            <a class="js-track-whatsapp" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener">WhatsApp · +62 811 2888 9804</a>
+            <a href="https://www.instagram.com/percussionrental/" target="_blank" rel="noopener noreferrer">Instagram · @percussionrental</a>
+            <a href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener noreferrer">WhatsApp · +62 811 2888 9804</a>
           </div>
         </div>
         <div class="footer-group">
           <h3>Lokasi</h3>
           <div class="footer-links">
             <span>Jakarta Raya, Indonesia</span>
-            <a class="js-track-maps" href="https://share.google/fQKJOkn1HUgyBwz7L" target="_blank" rel="noopener">Google Maps</a>
+            <a href="https://share.google/fQKJOkn1HUgyBwz7L" target="_blank" rel="noopener noreferrer">Google Maps</a>
             <span>Antar-jemput ke seluruh Pulau Jawa</span>
           </div>
         </div>
@@ -640,7 +642,7 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float js-track-whatsapp" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener" aria-label="Hubungi Percussion Rental melalui WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/6281128889804?text=Halo%20Ninoy%2C%20saya%20ingin%20konsultasi%20tentang%20sewa%20instrumen%20perkusi." target="_blank" rel="noopener noreferrer" aria-label="Hubungi Percussion Rental melalui WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="M8.7 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4.1.5.4l.8 1.8c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.2.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.5 0 .4-.2 1.2-.8 1.7-.5.5-1.3.8-2.2.6-1.4-.3-3.1-1.2-4.7-2.8-1.4-1.4-2.3-3-2.6-4.2-.2-.6-.1-1.1.1-1.5Z"/></svg>
   </a>
 

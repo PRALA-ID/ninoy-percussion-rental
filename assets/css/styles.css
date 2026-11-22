@@ -1,3 +1,40 @@
+/* Self-hosted fonts (SIL Open Font License, see assets/fonts/OFL-*.txt) */
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/dm-serif-display-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/dm-serif-display-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --primary: #0e3523;
   --primary-deep: #082719;
@@ -267,8 +304,7 @@ blockquote,
   color: var(--primary);
 }
 
-.btn:disabled,
-.scroll-btn:disabled {
+.btn:disabled {
   cursor: not-allowed;
   opacity: 0.42;
   transform: none;
@@ -465,6 +501,12 @@ blockquote,
   background: var(--primary-soft);
 }
 
+.hero-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-media img {
   width: 100%;
   height: 100%;
@@ -558,9 +600,7 @@ blockquote,
   max-height: 62px;
 }
 
-.logo-item:nth-child(1) img,
-.logo-item:nth-child(3) img,
-.logo-item:nth-child(7) img {
+.logo-invert {
   filter: grayscale(1) brightness(0) invert(1);
 }
 
@@ -731,8 +771,7 @@ blockquote,
 
 .project-context,
 .project-role,
-.project-date,
-.project-note {
+.project-date {
   margin-bottom: 0;
 }
 
@@ -763,17 +802,6 @@ blockquote,
   line-height: 1.45;
 }
 
-.project-note {
-  align-self: flex-start;
-  margin-top: 0.85rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--line);
-  color: #80580f;
-  font-size: 0.7rem;
-  font-weight: 800;
-  line-height: 1.4;
-}
-
 .project-track .project-card-body {
   padding: 0.9rem;
 }
@@ -781,8 +809,7 @@ blockquote,
 .project-track .project-card h3,
 .project-track .project-context,
 .project-track .project-role,
-.project-track .project-date,
-.project-track .project-note {
+.project-track .project-date {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -808,43 +835,12 @@ blockquote,
   font-size: 0.64rem;
 }
 
-.project-track .project-date,
-.project-track .project-note {
+.project-track .project-date {
   font-size: 0.62rem;
 }
 
 .project-track .project-date {
   margin-top: 0.25rem;
-}
-
-.scroll-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 0.85rem;
-}
-
-.scroll-btn {
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-small);
-  background: transparent;
-  color: var(--primary);
-  cursor: pointer;
-  transition: background-color 180ms ease, color 180ms ease;
-}
-
-.scroll-btn:hover:not(:disabled) {
-  background: var(--primary);
-  color: var(--neutral);
-}
-
-.scroll-btn svg {
-  width: 18px;
 }
 
 /* Rental process */
@@ -1147,7 +1143,7 @@ blockquote,
   object-fit: contain;
 }
 
-.credential:nth-child(2) .credential-logo img {
+.credential-logo .credential-seal {
   width: 36px;
   height: 36px;
   max-width: 36px;
@@ -1332,8 +1328,7 @@ blockquote,
   aspect-ratio: 16 / 9;
 }
 
-.project-grid .project-card:nth-child(3) .project-card-media img,
-.project-grid .project-card:nth-child(22) .project-card-media img {
+.project-card-media img.focus-upper {
   object-position: 50% 45%;
 }
 
@@ -1399,6 +1394,39 @@ blockquote,
   object-fit: cover;
 }
 
+/* Client logo (or name) shown until an event photo is available */
+.project-card-media--logo,
+.project-dialog-media--logo {
+  display: grid;
+  place-items: center;
+}
+
+.project-card-media--logo img {
+  width: 56%;
+  height: 46%;
+  object-fit: contain;
+}
+
+.project-dialog-media--logo img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.project-wordmark {
+  max-width: 85%;
+  color: var(--neutral);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.35rem);
+  line-height: 1.15;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.project-dialog-media .project-wordmark {
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+}
+
 .catalog-dialog .project-dialog-media {
   aspect-ratio: 4 / 3;
 }
@@ -1452,6 +1480,10 @@ blockquote,
   font-size: 0.86rem;
 }
 
+.catalog-dialog-cta {
+  margin-top: 1.1rem;
+}
+
 .catalog-dialog-price {
   margin-top: 0.85rem;
   color: var(--primary);
@@ -1492,37 +1524,6 @@ blockquote,
 }
 
 /* Catalog filters */
-.catalog-filters {
-  border-bottom: 1px solid var(--line);
-  background: #f8f2d5;
-}
-
-.catalog-filters-inner {
-  padding-block: clamp(2.5rem, 5vw, 4.5rem);
-}
-
-.catalog-filter-heading {
-  display: block;
-  margin-bottom: 2rem;
-}
-
-.catalog-filter-heading h2 {
-  margin-bottom: 0.5rem;
-  color: var(--primary);
-  font-size: clamp(1.65rem, 2.5vw, 2.2rem);
-}
-
-.catalog-filter-heading p {
-  max-width: 40rem;
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.catalog-filter-groups {
-  display: grid;
-  gap: 1.25rem;
-}
 
 .filter-group {
   display: grid;
@@ -1583,35 +1584,19 @@ blockquote,
   color: var(--neutral);
 }
 
-.catalog-filter-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: 1.5rem;
-}
-
-.catalog-result-count {
-  margin-bottom: 0;
-  color: var(--primary);
-  font-family: "DM Serif Display", Georgia, serif;
-  font-size: 1.65rem;
-}
-
 .catalog-results {
   background: var(--neutral);
 }
 
-.catalog-results-heading {
-  margin-bottom: 1.25rem;
-}
-
-.catalog-results-heading .section-title {
-  font-size: clamp(1.75rem, 2.8vw, 2.45rem);
-}
-
 .catalog-inline-filters {
   margin-bottom: 2rem;
+}
+
+.catalog-count {
+  margin: -0.75rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .title-line {
@@ -1665,10 +1650,6 @@ blockquote,
   align-items: baseline;
   gap: 0.45rem 0.75rem;
   padding: 1rem;
-}
-
-.item-index {
-  display: none;
 }
 
 .item-card h2,
@@ -1751,8 +1732,7 @@ blockquote,
 
   .project-track .project-context,
   .project-track .project-role,
-  .project-track .project-date,
-  .project-track .project-note {
+  .project-track .project-date {
     font-size: 0.58rem;
   }
 }
@@ -1936,15 +1916,6 @@ blockquote,
 
   .faq-layout .section-head {
     position: static;
-  }
-
-  .catalog-filter-heading {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .catalog-filter-heading p {
-    margin-bottom: 0;
   }
 
   .item-grid {
@@ -2133,10 +2104,6 @@ blockquote,
 
   .process-card h3 {
     font-size: 1.05rem;
-  }
-
-  .scroll-controls {
-    justify-content: flex-start;
   }
 
   .process-grid {
@@ -2484,15 +2451,6 @@ blockquote,
     width: 100%;
     margin-top: 0.15rem;
     font-size: 0.64rem;
-  }
-
-  .catalog-filter-summary {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .catalog-result-count {
-    font-size: 1.5rem;
   }
 
   .page-hero h1 {

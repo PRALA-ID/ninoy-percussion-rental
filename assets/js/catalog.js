@@ -96,9 +96,22 @@
   const dialogTitle = dialog.querySelector('#catalog-dialog-title');
   const dialogMeta = dialog.querySelector('.catalog-dialog-meta');
   const dialogPrice = dialog.querySelector('.catalog-dialog-price');
+  const dialogCta = dialog.querySelector('.catalog-dialog-cta');
+  const WHATSAPP_URL = 'https://wa.me/6281128889804';
   let activeCard = null;
 
   const cardText = (card, selector) => card.querySelector(selector)?.textContent.trim() || '';
+
+  // WhatsApp message names the item as the e-catalogue does ("Brand - Name") and links to the exact card,
+  // so items that share a name in the catalogue can still be told apart.
+  const bookingLink = (card) => {
+    const brand = cardText(card, '.brand');
+    const name = cardText(card, 'h3');
+    const label = brand ? `${brand} - ${name}` : name;
+    const itemUrl = `${window.location.origin}${window.location.pathname}#${card.id}`;
+    const message = `Halo Ninoy, saya ingin cek ketersediaan ${label} (${cardText(card, '.catalog-card-price')}).\n${itemUrl}\n\nTanggal sewa: `;
+    return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+  };
 
   const openInstrument = (card) => {
     const sourceImage = card.querySelector('.catalog-card-media img');
@@ -117,7 +130,22 @@
     dialogImage.sizes = sourceImage?.srcset ? '(max-width: 36rem) calc(100vw - 2rem), 34rem' : '';
     dialogImage.src = sourceImage?.currentSrc || sourceImage?.src || '';
     dialogImage.alt = sourceImage?.alt || '';
+    if (dialogCta) dialogCta.href = bookingLink(card);
     dialog.showModal();
+  };
+
+  // Links like /koleksi/#lp-maracas-red open that instrument directly.
+  const openLinkedInstrument = () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const card = id ? document.getElementById(id) : null;
+    if (!card || !card.matches('[data-catalog-item]')) return;
+    if (card.hidden) {
+      state.category = 'all';
+      updateCategoryQuery();
+      render();
+    }
+    card.scrollIntoView({ block: 'center' });
+    openInstrument(card);
   };
 
   const updateCardAccessibility = () => {
@@ -148,4 +176,6 @@
   });
 
   updateCardAccessibility();
+  window.addEventListener('hashchange', openLinkedInstrument);
+  requestAnimationFrame(openLinkedInstrument);
 })();

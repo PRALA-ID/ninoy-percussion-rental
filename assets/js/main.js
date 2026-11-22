@@ -53,7 +53,7 @@
   });
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const tracks = [...document.querySelectorAll('[data-scroll-track], .project-track')];
+  const tracks = [...document.querySelectorAll('[data-scroll-track]')];
 
   tracks.forEach((track) => {
     const controls = [
