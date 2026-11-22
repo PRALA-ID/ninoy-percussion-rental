@@ -441,6 +441,7 @@ blockquote,
   position: relative;
   overflow: hidden;
   padding-block: 0;
+  background: #fff;
 }
 
 .hero-grid {
@@ -460,17 +461,6 @@ blockquote,
   border-radius: 0;
 }
 
-.hero-grid::after {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.7) 34%, rgba(0, 0, 0, 0.2) 68%, transparent 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.46) 0%, transparent 55%);
-  content: "";
-  pointer-events: none;
-}
-
 .hero-copy {
   z-index: 2;
   grid-area: 1 / 1;
@@ -486,7 +476,7 @@ blockquote,
 .hero h1 {
   max-width: none;
   margin-bottom: 1.2rem;
-  color: var(--neutral);
+  color: var(--primary);
   font-size: clamp(2.2rem, 3.2vw, 2.8rem);
   letter-spacing: -0.025em;
 }
@@ -504,7 +494,7 @@ blockquote,
 .hero-title-support {
   max-width: none;
   margin-top: 0.05em;
-  color: var(--neutral);
+  color: var(--primary);
   font-size: inherit;
   line-height: inherit;
   letter-spacing: inherit;
@@ -513,7 +503,7 @@ blockquote,
 .hero-subtitle {
   max-width: 39rem;
   margin-bottom: 1.9rem;
-  color: rgba(255, 255, 227, 0.76);
+  color: var(--muted);
   font-size: clamp(1rem, 1.3vw, 1.12rem);
 }
 
@@ -532,7 +522,7 @@ blockquote,
   aspect-ratio: auto;
   border: 0;
   border-radius: inherit;
-  background: var(--primary-soft);
+  background: #fff;
 }
 
 .hero-media picture {
@@ -545,7 +535,7 @@ blockquote,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 45%;
+  object-position: 85% 45%;
 }
 
 /* Credibility */
@@ -1763,7 +1753,26 @@ blockquote,
 
 @media (max-width: 980px) {
   .hero-grid {
+    height: auto;
     grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    grid-area: 1 / 1;
+    padding-bottom: 0.5rem;
+    transform: none;
+  }
+
+  .hero-media {
+    grid-area: 2 / 1;
+    height: auto;
+  }
+
+  .hero-media img {
+    height: auto;
+    max-height: 420px;
+    aspect-ratio: 8 / 5;
+    object-position: 50% 100%;
   }
 
   .hero h1 {
@@ -1912,9 +1921,6 @@ blockquote,
     aspect-ratio: auto;
   }
 
-  .hero-media img {
-    object-position: center;
-  }
 
   .category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2326,15 +2332,15 @@ blockquote,
 
   .hero-grid {
     width: 100vw;
-    height: 460px;
+    height: auto;
     margin-inline: calc(50% - 50vw);
     aspect-ratio: auto;
   }
 
   .hero-copy {
     width: calc(100% - 1.75rem);
-    padding: 1.5rem;
-    transform: translateY(-0.6rem);
+    padding: 1.5rem 1.5rem 0.25rem;
+    transform: none;
   }
 
   .hero h1 {

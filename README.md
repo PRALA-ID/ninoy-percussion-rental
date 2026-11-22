@@ -21,9 +21,10 @@ Then open `http://localhost:8000/`.
 
 - Vanilla HTML/CSS/JS.
 - Responsive layouts validated from 320px through 1440px.
-- The landing hero uses an edge-to-edge section image while its raised overlay copy
-  remains aligned to the centered desktop content guide. Screens up to 600px wide get a crop of the
-  same photo (`smartfren-malam-100-cinta-2024-hero-mobile.webp`) so no event logo sits behind the headline.
+- The landing hero shows two white snare drums (Drive: snare drum › snare 3 › Ninoy _ Catalog-85) on the
+  studio backdrop, extended to the left and faded to white behind the headline
+  (`hero-snare-drums-1600/2400/3000.webp`). Up to 980px wide the text sits on white with a separate crop
+  of the drums underneath (`hero-snare-drums-mobile-800/1200/1600.webp`).
 - Homepage collaborations use a fixed four-column, two-row desktop grid with equal-height cards;
   the project page uses the same compact 16:9 card treatment. Card photos come in `-400`, `-600` and
   `-800.webp` versions plus the full-size file, chosen through `srcset`/`sizes`; the project popup picks
