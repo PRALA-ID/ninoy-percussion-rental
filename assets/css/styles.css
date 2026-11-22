@@ -438,10 +438,14 @@ blockquote,
 
 /* Hero */
 .hero {
+  /* where the headline block ends: container edge + copy padding + widest line (the subtitle) */
+  --hero-text-end: calc(max(1.5rem, (100vw - 1120px) / 2) + clamp(1.75rem, 3vw, 2.75rem) + clamp(29.3rem, 38.09vw, 32.8rem));
   position: relative;
   overflow: hidden;
   padding-block: 0;
-  background: #fff;
+  background:
+    linear-gradient(90deg, #fff 0, #fff var(--hero-text-end), rgba(255, 255, 255, 0) calc(var(--hero-text-end) + 14vw)),
+    linear-gradient(180deg, #f5f8ff 0%, #f3f7ff 16%, #edf1fd 58%, #e8eaf9 100%);
 }
 
 .hero-grid {
@@ -511,31 +515,31 @@ blockquote,
   display: none;
 }
 
+/* Drums sit centred in the space between the headline and the right edge, standing on the bottom */
 .hero-media {
+  position: absolute;
   z-index: 0;
   grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
+  inset: 0 0 0 var(--hero-text-end);
+  display: flex;
   min-width: 0;
   margin: 0;
+  align-items: flex-end;
+  justify-content: center;
   overflow: hidden;
-  aspect-ratio: auto;
   border: 0;
   border-radius: inherit;
-  background: #fff;
 }
 
 .hero-media picture {
   display: block;
-  width: 100%;
-  height: 100%;
+  height: 84%;
 }
 
 .hero-media img {
-  width: 100%;
+  width: auto;
+  max-width: none;
   height: 100%;
-  object-fit: cover;
-  object-position: 85% 45%;
 }
 
 /* Credibility */
@@ -1024,7 +1028,7 @@ blockquote,
   color: var(--primary);
   cursor: pointer;
   font-size: 0.94rem;
-  font-weight: 750;
+  font-weight: 800;
   line-height: 1.45;
   list-style: none;
 }
@@ -1473,7 +1477,7 @@ blockquote,
 .project-dialog-context {
   color: var(--muted);
   font-size: 0.86rem;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .project-dialog-role {
@@ -1763,15 +1767,28 @@ blockquote,
     transform: none;
   }
 
+  .hero {
+    background: #fff;
+  }
+
   .hero-media {
+    position: static;
+    display: block;
     grid-area: 2 / 1;
     height: auto;
   }
 
+  .hero-media picture {
+    width: 100%;
+    height: auto;
+  }
+
   .hero-media img {
+    width: 100%;
     height: auto;
     max-height: 420px;
     aspect-ratio: 8 / 5;
+    object-fit: cover;
     object-position: 50% 100%;
   }
 

@@ -21,10 +21,10 @@ Then open `http://localhost:8000/`.
 
 - Vanilla HTML/CSS/JS.
 - Responsive layouts validated from 320px through 1440px.
-- The landing hero shows two white snare drums (Drive: snare drum › snare 3 › Ninoy _ Catalog-85) on the
-  studio backdrop, extended to the left and faded to white behind the headline
-  (`hero-snare-drums-1600/2400/3000.webp`). Up to 980px wide the text sits on white with a separate crop
-  of the drums underneath (`hero-snare-drums-mobile-800/1200/1600.webp`).
+- The landing hero shows two white snare drums (Drive: snare drum › snare 3 › Ninoy _ Catalog-85). On screens
+  wider than 980px the drums (`hero-snare-drums-cut-600/900/1200.webp`, soft edges) stand centred in the space
+  between the headline and the right edge, on a background that matches the studio backdrop. Up to 980px the
+  text sits on white with a separate crop of the drums underneath (`hero-snare-drums-mobile-800/1200/1600.webp`).
 - Homepage collaborations use a fixed four-column, two-row desktop grid with equal-height cards;
   the project page uses the same compact 16:9 card treatment. Card photos come in `-400`, `-600` and
   `-800.webp` versions plus the full-size file, chosen through `srcset`/`sizes`; the project popup picks
@@ -57,7 +57,10 @@ Then open `http://localhost:8000/`.
 - Long catalog metadata uses single-line ellipsis truncation to preserve the inline price.
 - The testimonials section is hidden (`hidden` attribute) until approved client quotes are supplied;
   its markup and styles are kept so it can be switched back on.
-- Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License.
+- Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License. Use the
+  weights 400, 600, 700 and 800 only (the old Google Fonts setup rounded in-between weights to these).
+- CSS and JS links carry a version tag (`styles.css?v=2026112201`). When you change CSS or JS, raise that number in
+  all three pages so returning visitors don't mix a new page with an old cached file.
 - Canonical, Open Graph, JSON-LD, `sitemap.xml` and `robots.txt` use
   `https://prala-id.github.io/ninoy-percussion-rental/` until `percussionrental.id` is connected.
   To switch: add a `CNAME` file with the domain, set it in the repository's Pages settings, and replace
