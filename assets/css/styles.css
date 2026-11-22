@@ -2762,3 +2762,48 @@ blockquote,
     top: calc(0.15rem + 88.9px);
   }
 }
+
+/* Popup text: the same compact structure as the cards, laid out the same way in every browser */
+.project-dialog-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-dialog-body > * {
+  margin: 0;
+}
+
+.project-dialog-body h2 {
+  margin-bottom: 0.4rem;
+}
+
+.project-dialog-role {
+  margin-top: 0.2rem;
+}
+
+.project-dialog-date {
+  margin-top: 0.1rem;
+}
+
+.project-dialog-source-slot {
+  margin-top: 0.8rem;
+}
+
+.catalog-dialog-meta {
+  color: #354c40;
+  font-weight: 800;
+}
+
+.catalog-dialog-price {
+  margin-top: 0.3rem;
+}
+
+.catalog-dialog-cta {
+  margin-top: 1.1rem;
+}
+
+/* Project page: cards in the same row share one height */
+.project-grid {
+  align-items: stretch;
+}
