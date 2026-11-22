@@ -2561,3 +2561,169 @@ blockquote,
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ---------- Readability and small-screen fixes ---------- */
+
+/* Card text wraps onto the next line instead of being cut off with "…" */
+.project-track .project-card h3,
+.project-track .project-context,
+.project-track .project-role,
+.project-track .project-date,
+.project-grid .project-card h2,
+.project-grid .project-context,
+.project-grid .project-role,
+.project-grid .project-date,
+.item-card h2,
+.item-card h3,
+.item-meta {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.project-card-body {
+  height: auto;
+  min-height: 110px;
+}
+
+/* Smallest card text stays readable */
+.project-track .project-context,
+.project-track .project-role,
+.project-track .project-date,
+.project-grid .project-context,
+.project-grid .project-role,
+.project-grid .project-date {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.item-meta,
+.item-price {
+  font-size: 0.75rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Footer links: taller tap areas, same look */
+.footer-links {
+  gap: 0;
+}
+
+.footer-links a {
+  display: flex;
+  min-height: 2.25rem;
+  align-items: center;
+}
+
+@media (min-width: 981px) and (max-width: 1199px) {
+  .project-track .project-context,
+  .project-track .project-role,
+  .project-track .project-date {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .number-item dt {
+    font-size: 0.7rem;
+  }
+
+  .project-row .project-card h3,
+  .project-grid .project-card h2 {
+    font-size: 0.84rem;
+  }
+
+  .project-row .project-context,
+  .project-row .project-role,
+  .project-row .project-date,
+  .project-grid .project-context,
+  .project-grid .project-role,
+  .project-grid .project-date {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .catalog-grid .item-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .item-meta,
+  .item-price {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-row .project-card-body {
+    height: auto;
+    min-height: 96px;
+    flex: 1 0 auto;
+  }
+
+  .project-row .project-card h3,
+  .project-grid .project-card h2 {
+    font-size: 0.82rem;
+  }
+
+  .project-row .project-context,
+  .project-row .project-role,
+  .project-row .project-date,
+  .project-grid .project-context,
+  .project-grid .project-role,
+  .project-grid .project-date {
+    font-size: 0.69rem;
+    line-height: 1.3;
+  }
+
+  .item-card h2,
+  .item-card h3 {
+    font-size: 0.88rem;
+    white-space: normal;
+  }
+
+  .item-meta,
+  .item-price {
+    font-size: 0.69rem;
+  }
+}
+
+/* Smallest phones: hero spans the full width and the title fits */
+@media (max-width: 350px) {
+  .hero-grid {
+    width: 100vw;
+  }
+
+  .hero h1 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Phones turned sideways: popup photo beside the text so everything fits */
+@media (orientation: landscape) and (max-height: 520px) {
+  .project-dialog {
+    width: min(46rem, calc(100% - 2rem));
+  }
+
+  .project-dialog-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .project-dialog-media,
+  .catalog-dialog .project-dialog-media {
+    height: 100%;
+    max-height: calc(100dvh - 2rem);
+    aspect-ratio: auto;
+  }
+
+  .project-dialog-body {
+    padding: 1rem 3.5rem 1rem 1.25rem;
+  }
+}
