@@ -41,6 +41,9 @@ Then open `http://localhost:8000/`.
   covers the card, added by `project.js` / `catalog.js`.
 - Project details live in three places that must be kept in sync: the homepage cards (`index.html`),
   the logo-strip dialog data (`assets/js/logo-projects.js`) and the project page (`project/index.html`).
+- Each project popup shows a "Lihat sumber" link to a public page that confirms the event. The URL is the card's
+  `data-source` attribute (homepage and project page) and the `sources` map in `logo-projects.js`; cards without one
+  (e.g. Greetings From Manny Moon) show no link.
 - The instrument catalog (`/koleksi`) mirrors the *Ninoy Percussion Rental Instrument E-Catalogue* PDF,
   which is the single source of truth: names, brands, prices, categories (Pitched, Unpitched,
   Auxiliary, Latin) and order all come from the PDF. Update the PDF first, then mirror it here;
@@ -59,7 +62,7 @@ Then open `http://localhost:8000/`.
   its markup and styles are kept so it can be switched back on.
 - Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License. Use the
   weights 400, 600, 700 and 800 only (the old Google Fonts setup rounded in-between weights to these).
-- CSS and JS links carry a version tag (`styles.css?v=2026112202`). When you change CSS or JS, raise that number in
+- CSS and JS links carry a version tag (`styles.css?v=2026112203`). When you change CSS or JS, raise that number in
   all three pages so returning visitors don't mix a new page with an old cached file.
 - Canonical, Open Graph, JSON-LD, `sitemap.xml` and `robots.txt` use
   `https://prala-id.github.io/ninoy-percussion-rental/` until `percussionrental.id` is connected.
@@ -75,7 +78,7 @@ Keep this list up to date when adding third-party photos, so credits and permiss
 - The Music of Studio Ghibli (AFAID 2025): official Anime Festival Asia Indonesia material.
 - The Legends 10: Magic: TRUST Orchestra.
 - Hammersonic Festival 2024: Hammersonic website.
-- Kinderfield School Cinere: Kinderfield School website.
+- Kinderfield School Cinere: campus photo cropped from the banner on the Kinderfield–Highfield School website.
 - Malam 100 Cinta 2025: XLSMART website.
 - Festival Cahaya Kebaikan: Tehbotol Sosro official YouTube channel.
 - Perak (album cover): Thee Marloes official YouTube channel.

@@ -13,6 +13,7 @@
   const dialogContext = dialog.querySelector('.project-dialog-context');
   const dialogRole = dialog.querySelector('.project-dialog-role');
   const dialogDate = dialog.querySelector('.project-dialog-date');
+  const dialogSource = dialog.querySelector('.project-dialog-source');
   let activeCard = null;
 
   const cardText = (card, selector) => card.querySelector(selector)?.textContent.trim() || '';
@@ -47,6 +48,16 @@
     dialogContext.classList.toggle('project-highlight', sourceContext?.classList.contains('project-highlight'));
     dialogRole.hidden = !dialogRole.textContent;
     dialogDate.hidden = !dialogDate.textContent;
+    if (dialogSource) {
+      const source = card.dataset.source || '';
+      dialogSource.hidden = !source;
+      if (source) {
+        dialogSource.href = source;
+        dialogSource.setAttribute('aria-label', `Lihat sumber ${dialogTitle.textContent} (tab baru)`);
+      } else {
+        dialogSource.removeAttribute('href');
+      }
+    }
     showMedia(card.querySelector('.project-card-media'));
     dialog.showModal();
   };
