@@ -62,7 +62,7 @@ Then open `http://localhost:8000/`.
   its markup and styles are kept so it can be switched back on.
 - Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License. Use the
   weights 400, 600, 700 and 800 only (the old Google Fonts setup rounded in-between weights to these).
-- CSS and JS links carry a version tag (`styles.css?v=2026112203`). When you change CSS or JS, raise that number in
+- CSS and JS links carry a version tag (`styles.css?v=2026112204`). When you change CSS or JS, raise that number in
   all three pages so returning visitors don't mix a new page with an old cached file.
 - Canonical, Open Graph, JSON-LD, `sitemap.xml` and `robots.txt` use
   `https://prala-id.github.io/ninoy-percussion-rental/` until `percussionrental.id` is connected.

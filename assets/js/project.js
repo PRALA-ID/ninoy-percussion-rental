@@ -13,7 +13,26 @@
   const dialogContext = dialog.querySelector('.project-dialog-context');
   const dialogRole = dialog.querySelector('.project-dialog-role');
   const dialogDate = dialog.querySelector('.project-dialog-date');
-  const dialogSource = dialog.querySelector('.project-dialog-source');
+  // "Lihat sumber" link: built only when the project has a public source page.
+  const sourceSlot = dialog.querySelector('.project-dialog-source-slot');
+  const setSource = (url, title) => {
+    if (!sourceSlot) return;
+    sourceSlot.replaceChildren();
+    sourceSlot.hidden = !url;
+    if (!url) return;
+    const link = document.createElement('a');
+    link.className = 'project-dialog-source';
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', `Lihat sumber ${title} (tab baru)`);
+    link.append('Lihat sumber ');
+    const arrow = document.createElement('span');
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+    link.append(arrow);
+    sourceSlot.append(link);
+  };
   let activeCard = null;
 
   const cardText = (card, selector) => card.querySelector(selector)?.textContent.trim() || '';
@@ -48,16 +67,7 @@
     dialogContext.classList.toggle('project-highlight', sourceContext?.classList.contains('project-highlight'));
     dialogRole.hidden = !dialogRole.textContent;
     dialogDate.hidden = !dialogDate.textContent;
-    if (dialogSource) {
-      const source = card.dataset.source || '';
-      dialogSource.hidden = !source;
-      if (source) {
-        dialogSource.href = source;
-        dialogSource.setAttribute('aria-label', `Lihat sumber ${dialogTitle.textContent} (tab baru)`);
-      } else {
-        dialogSource.removeAttribute('href');
-      }
-    }
+    setSource(card.dataset.source || '', dialogTitle.textContent);
     showMedia(card.querySelector('.project-card-media'));
     dialog.showModal();
   };

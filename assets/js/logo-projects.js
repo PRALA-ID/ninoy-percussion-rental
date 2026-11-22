@@ -30,7 +30,26 @@
   };
 
   const closeButton = dialog.querySelector('.project-dialog-close');
-  const dialogSource = dialog.querySelector('.project-dialog-source');
+  // "Lihat sumber" link: built only when the project has a public source page.
+  const sourceSlot = dialog.querySelector('.project-dialog-source-slot');
+  const setSource = (url, title) => {
+    if (!sourceSlot) return;
+    sourceSlot.replaceChildren();
+    sourceSlot.hidden = !url;
+    if (!url) return;
+    const link = document.createElement('a');
+    link.className = 'project-dialog-source';
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', `Lihat sumber ${title} (tab baru)`);
+    link.append('Lihat sumber ');
+    const arrow = document.createElement('span');
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+    link.append(arrow);
+    sourceSlot.append(link);
+  };
   const dialogMedia = dialog.querySelector('.project-dialog-media');
   const dialogImage = dialog.querySelector('.project-dialog-media img');
   const dialogTitle = dialog.querySelector('#logo-project-dialog-title');
@@ -53,16 +72,7 @@
       dialogContext.textContent = context;
       dialogRole.textContent = role;
       dialogDate.textContent = date;
-      const source = sources[link.hash.slice(1)] || '';
-      if (dialogSource) {
-        dialogSource.hidden = !source;
-        if (source) {
-          dialogSource.href = source;
-          dialogSource.setAttribute('aria-label', `Lihat sumber ${title} (tab baru)`);
-        } else {
-          dialogSource.removeAttribute('href');
-        }
-      }
+      setSource(sources[link.hash.slice(1)] || '', title);
       dialogMedia?.classList.toggle('project-dialog-media--logo', Boolean(logo));
       dialogImage.className = logo === 'logo-invert' ? 'logo-invert' : '';
       dialogImage.src = image;

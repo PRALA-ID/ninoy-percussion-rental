@@ -2732,7 +2732,6 @@ blockquote,
 .project-dialog-source {
   display: inline-flex;
   min-height: 2rem;
-  margin-top: 0.6rem;
   align-items: center;
   gap: 0.3rem;
   color: var(--primary);
@@ -2747,8 +2746,8 @@ blockquote,
   text-decoration-color: currentColor;
 }
 
-.project-dialog-source[hidden] {
-  display: none;
+.project-dialog-source-slot {
+  margin: 0.6rem 0 0;
 }
 
 /* Swipe arrows sit on the edge between photo and text, as before the cards grew taller */
