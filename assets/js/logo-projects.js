@@ -9,7 +9,7 @@
   const projects = {
     'senja-teduh-pelita': ['Senja Teduh Pelita', 'Jakarta Movin × MALIQ · Indonesia Kaya', 'Rental & Collaboration', 'Jul 2026 · Graha Bhakti Budaya, TIM', 'assets/images/senja-teduh-pelita-2026.webp'],
     'symphonesia-bangga-indonesia': ['SYMPHONESIA: Bangga Indonesia', 'Erwin Gutawa Productions', 'Collaboration', 'Aug 2024 · Ciputra Artpreneur Theater', 'assets/images/erwin-gutawa-symphonesia-v-bangga-indonesia.webp'],
-    'java-jazz-on-the-move': ['Java Jazz on the Move', 'Java Jazz Festival', 'Collaboration', 'Apr 2022 · Lippo Mall Puri', 'assets/images/java-jazz-on-the-move-2022.webp'],
+    'java-jazz-on-the-move': ['Java Jazz on the Move', 'Java Jazz Festival', 'Collaboration', 'May 2022 · Puri Indah Mall', 'assets/images/java-jazz-on-the-move-2022.webp'],
     'hammersonic-festival-2024': ['Hammersonic Festival 2024', 'Ravel Entertainment', 'Rental', 'May 2024 · Pantai Carnaval Ancol', 'assets/images/hammersonic-festival-2024.webp'],
     'erwin-gutawa-karaokestra': ['Erwin Gutawa Karaokestra', 'Pestapora 2024', 'Collaboration', 'Sep 2024 · JIExpo Kemayoran', 'assets/images/erwin-gutawa-karaokestra-pestapora-2024.webp'],
     'festival-cahaya-kebaikan': ['Festival Cahaya Kebaikan', '50 Tahun Tehbotol Sosro', 'Collaboration', 'Sep 2024 · Senayan Park', 'assets/images/festival-cahaya-kebaikan-2024.webp'],
