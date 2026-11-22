@@ -2,13 +2,15 @@
 
 Production-ready static website with three routes:
 
-- `/index.html` — main landing page
-- `/koleksi/index.html` — full percussion catalog
-- `/project/index.html` — projects & performances
+- `/` — main landing page
+- `/koleksi/` — full percussion catalog
+- `/project/` — projects & performances
+
+Internal links use folder URLs (`koleksi/`, `../project/`), so preview the site through a web server.
 
 ## Preview locally
 
-Open `index.html` directly, or serve the folder locally:
+Serve the folder locally:
 
 ```bash
 python -m http.server 8000
@@ -27,7 +29,10 @@ Then open `http://localhost:8000/`.
   version through `srcset`; the detail dialog uses the full-size file.
 - Project service labels are Rental, Collaboration, or Rental & Collaboration.
 - Projects without an event photo show the client's logo on a dark tile (`project-card-media--logo`),
-  or the client's name where no logo is available. Replace the tile with a photo when one is supplied.
+  or the client's name where no logo is available (Thee Marloes, Rumah Perkusi). Replace the tile with
+  a photo when one is supplied.
+- Project and instrument cards open their detail popup through an invisible button (`.card-open`) that
+  covers the card, added by `project.js` / `catalog.js`.
 - Project details live in three places that must be kept in sync: the homepage cards (`index.html`),
   the logo-strip dialog data (`assets/js/logo-projects.js`) and the project page (`project/index.html`).
 - The instrument catalog (`/koleksi`) mirrors the *Ninoy Percussion Rental Instrument E-Catalogue* PDF,
@@ -45,3 +50,7 @@ Then open `http://localhost:8000/`.
 - The testimonials section is hidden (`hidden` attribute) until approved client quotes are supplied;
   its markup and styles are kept so it can be switched back on.
 - Fonts (Inter, DM Serif Display) are self-hosted from `assets/fonts/` under the SIL Open Font License.
+- Canonical, Open Graph, JSON-LD, `sitemap.xml` and `robots.txt` use
+  `https://prala-id.github.io/ninoy-percussion-rental/` until `percussionrental.id` is connected.
+  To switch: add a `CNAME` file with the domain, set it in the repository's Pages settings, and replace
+  that base URL in the three pages, `sitemap.xml` and `robots.txt`.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://percussionrental.id/sitemap.xml
+Sitemap: https://prala-id.github.io/ninoy-percussion-rental/sitemap.xml

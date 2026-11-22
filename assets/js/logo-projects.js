@@ -2,7 +2,7 @@
   'use strict';
 
   const dialog = document.getElementById('logo-project-dialog');
-  const logoLinks = [...document.querySelectorAll('.logo-item[href*="project/index.html#"]')];
+  const logoLinks = [...document.querySelectorAll('.logo-item[href*="project/#"]')];
   if (!dialog || !logoLinks.length || typeof dialog.showModal !== 'function') return;
 
   // [title, context, role, date, image, logo] — logo is 'logo' or 'logo-invert' when no event photo exists yet.

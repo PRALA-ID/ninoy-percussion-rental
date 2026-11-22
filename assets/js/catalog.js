@@ -148,22 +148,24 @@
     openInstrument(card);
   };
 
-  const updateCardAccessibility = () => {
+  // A real (invisible) button covers each card, so keyboards and screen readers get a proper
+  // "Lihat detail …" button while the card's name, brand and price stay readable.
+  const addOpenButtons = () => {
     cards.forEach((card) => {
-      card.tabIndex = 0;
-      card.setAttribute('role', 'button');
-      card.setAttribute('aria-haspopup', 'dialog');
-      card.setAttribute('aria-label', `Lihat detail ${cardText(card, 'h3')}`);
+      const button = document.createElement('button');
+      const label = document.createElement('span');
+      button.type = 'button';
+      button.className = 'card-open';
+      button.setAttribute('aria-haspopup', 'dialog');
+      label.className = 'visually-hidden';
+      label.textContent = `Lihat detail ${cardText(card, 'h3')}`;
+      button.append(label);
+      card.append(button);
     });
   };
 
   cards.forEach((card) => {
     card.addEventListener('click', () => openInstrument(card));
-    card.addEventListener('keydown', (event) => {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
-      event.preventDefault();
-      openInstrument(card);
-    });
   });
 
   closeButton?.addEventListener('click', () => dialog.close());
@@ -171,11 +173,11 @@
     if (event.target === dialog) dialog.close();
   });
   dialog.addEventListener('close', () => {
-    activeCard?.focus();
+    activeCard?.querySelector('.card-open')?.focus();
     activeCard = null;
   });
 
-  updateCardAccessibility();
+  addOpenButtons();
   window.addEventListener('hashchange', openLinkedInstrument);
   requestAnimationFrame(openLinkedInstrument);
 })();

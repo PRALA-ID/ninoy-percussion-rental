@@ -160,6 +160,40 @@ blockquote,
   transform: translateY(0);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Invisible button over a whole project or instrument card; opens its detail popup */
+.project-card,
+.catalog-card {
+  position: relative;
+}
+
+.card-open {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.card-open:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
 .container {
   width: min(var(--container), calc(100% - 3rem));
   margin-inline: auto;
@@ -725,11 +759,6 @@ blockquote,
   background: var(--neutral);
   cursor: pointer;
   scroll-snap-align: start;
-}
-
-.project-card:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
 }
 
 .project-track .project-card {
@@ -1622,11 +1651,6 @@ blockquote,
 
 .catalog-card {
   cursor: pointer;
-}
-
-.catalog-card:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
 }
 
 .item-media {
