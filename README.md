@@ -37,6 +37,9 @@ Then open `http://localhost:8000/`.
   Pageant Musical and Steel Pan. Remove `hidden` to show one again. The homepage numbers
   (20+ Performance, 10+ Rental Clients) are typed by hand; update them when projects are shown or hidden.
 - Client logos in the homepage strip are stored at about 3× their display size.
+- The link-sharing preview (`og:image`) is `assets/images/og-percussion-rental-2026.jpg`: logo, headline and the hero
+  drums. When you replace it, give the new image a new file name, so WhatsApp and other apps fetch the new one
+  instead of showing their cached copy of the old preview.
 - Project and instrument cards open their detail popup through an invisible button (`.card-open`) that
   covers the card, added by `project.js` / `catalog.js`.
 - Project details live in three places that must be kept in sync: the homepage cards (`index.html`),
