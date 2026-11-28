@@ -35,7 +35,7 @@ Then open `http://localhost:8000/`.
   (Mānoa Valley Theatre logo) and Steel Pan (Rumah Perkusi name) cards use these.
 - Hidden project cards (`hidden` attribute, project page only): BYU–Hawaii Salsa Orchestra & Street Band,
   Pageant Musical and Steel Pan. Remove `hidden` to show one again. The homepage numbers
-  (15+ Performance, 5+ Rental Clients) are typed by hand; update them when projects are shown or hidden.
+  (20+ Performance, 10+ Rental Clients) are typed by hand; update them when projects are shown or hidden.
 - Client logos in the homepage strip are stored at about 3× their display size.
 - Project and instrument cards open their detail popup through an invisible button (`.card-open`) that
   covers the card, added by `project.js` / `catalog.js`.
